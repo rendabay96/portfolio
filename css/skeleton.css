@@ -31,7 +31,8 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  /*max-width: 960px;*/
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
@@ -40,6 +41,110 @@
   width: 100%;
   float: left;
   box-sizing: border-box; }
+
+
+/*.one-half, .one-third, .one-fourth, .one-fifth {
+   width: 96%; b/c we're adding a margin of 2% each side 
+   float: left;  Each column is set to float left, which pushes them to the left side. This allows the other columns in the section to wrap around. 
+   position: relative;
+   min-height: 1px;
+   margin: 0 2% 20px;  0 on top, 2% on left and right side, and 20px on the bottom. We are building with Mobile in mind 
+} */
+
+header {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/purple-oj-hike.png");
+  background-size: cover;
+}
+
+/*nav {  
+  position: relative;
+  width: 100%;
+  /*max-width: 960px;
+  margin-top: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /*background-color: black;
+  background-blend-mode: color-burn;
+  opacity: 0.3;
+  box-sizing: border-box; 
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.40);
+}*/
+
+header .navbar {
+  display: block;
+  width: 100%;
+  height: 6rem;
+  z-index: 90;
+  background-color: rgba(193,66,66,0.5);
+  margin-top: 0px;
+}
+
+
+header .navbar img {
+  max-width: 3%;
+  min-width: 20px;
+  opacity: 1;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  z-index: 99;
+}
+
+header .navbar-item {
+  position: relative;
+  float: right;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  z-index: 99;
+}
+
+header .navbar-item ul > li { /*parent ul, child li. remove bullets with list style type non */
+   list-style-type: none;
+   display: inline-block;
+   font-size: 16px;
+   font-weight: 200;
+   margin-left: 25px;
+   
+}
+
+header .navbar-item ul > li > a {
+    text-decoration: none;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+header h1 {
+  color: #ffffff;
+  font-family: "Minion Pro";
+}
+
+header h4 {
+  color: #ffffff;
+  font-family: "roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+}
+
+header .hero a.btn-outline { 
+   padding: 10px 15px;
+   border-radius: 1px;
+   text-decoration: none;
+   color: #ffffff;
+   /*background-color: rgba(70,188,161);*/
+   background-color: #46BCA1;
+}
+header nav ul > li.btn-outline: hover {
+   background: #FAE844;
+}
+
+header nav ul > li.btn-outline: hover > a {
+   color: #50E3C2;
+}
+
+header .hero {
+  text-align: center;
+}
+
 
 /* For devices larger than 400px */
 @media (min-width: 400px) {
@@ -124,7 +229,7 @@ body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222; }
 
 
