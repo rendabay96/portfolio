@@ -104,7 +104,7 @@ header {
     font-weight: 500;
     color: #ffffff;
 }
-header h2 {
+h2 {
   color: #ffffff;
   font-family: "Raleway", "Minion Pro";
   margin-top: 150px;
@@ -137,8 +137,7 @@ header nav ul > li.btn-outline: hover > a {
    color: #ffffff;
 }
 */
-
-header .hero {
+.hero {
   text-align: center;
 }
 
@@ -161,7 +160,7 @@ header .hero {
   margin-top: 50px;
 } 
 
-.project p {
+p {
   color: #727272;
 }
 
@@ -186,6 +185,34 @@ header .hero {
   margin-top: 50px;
   margin-bottom: 60px;
   padding-top: 60px;
+}
+
+.aboutme img {
+  height: 90px;
+}
+.img-circle {
+    border-radius: 50%;
+}
+
+.aboutme a.btn-outline {
+  padding: 10px 15px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #0CAAA2;
+  border: 1px solid #0CAAA2;
+
+}
+
+.my-bio {
+  width: 100vw;
+  height: 70vh;
+  background: url("../images/about/me-hike.jpg") no-repeat center center fixed;
+  background-size: cover;
+  /*background: url(../images/home/teal-blue-hike.png) no-repeat center center fixed;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 
