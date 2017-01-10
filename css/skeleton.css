@@ -42,9 +42,17 @@
   float: left;
   box-sizing: border-box; }
 
+/* Line Breaks, Fonts */
+.firstbreak {
+  display: none;
+}
+.secondbreak {
+  display: none;
+}
+
 h2 {
-  color: #333333;
-  font-family: "Raleway", "Minion Pro";
+  color: #ffffff;
+  font-family: "Raleway", "Source Sans Pro" /*"Minion Pro";*/;
 }
 
 h4 {
@@ -53,16 +61,25 @@ h4 {
   font-weight: 500;
 }
 
+/* HEADER and NAVBAR 
+_________________________________________________________________*/
+
 header {
   width: 100vw;
-  height: 70vh;
+  height: 100vh;
   background: url("../images/home/purple-oj-hike.png") no-repeat center center fixed;
   background-size: cover;
+
   /*background: url(../images/home/teal-blue-hike.png) no-repeat center center fixed;*/
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+}
+#cover { 
+  background-size: cover; 
+}
+
+header h2 {
+  color: #ffffff;
+  margin-top: 10%;
+  
 }
 
 .navbar {
@@ -74,10 +91,21 @@ header {
   margin-top: 0px;
 }
 
+
+.hamburger {
+  z-index: 1000;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 22px;
+  float: right;
+  margin-top: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
 .navbar img {
-  max-width: 12%;
+  max-width: 10%;
   min-width: 100px;
-  margin-top: 1.5rem;
+  margin-top: 1.7rem;
   margin-bottom: 1.5rem;
   z-index: 99;
 }
@@ -103,11 +131,6 @@ header {
     text-decoration: none;
     font-weight: 500;
     color: #ffffff;
-}
-h2 {
-  color: #ffffff;
-  font-family: "Raleway", "Minion Pro";
-  margin-top: 150px;
 }
 
 header h4 {
@@ -141,14 +164,18 @@ header nav ul > li.btn-outline: hover > a {
   text-align: center;
 }
 
+
+
+/* PROJECTS */
+
 .project {
   position: relative;
-  background-color: #ffffff;
-  height: 400px;
+  
+  height: 500px;
   width: 100vw;
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 60px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .project img {
@@ -173,10 +200,22 @@ p {
 
 }
 
+.project2 {
+  background-color: #f7f7f7;
+}
+
+.alignleft {
+  text-align: center;
+}
+.alignright{
+  text-align: center;
+}
+
+
 .aboutme {
   position: relative;
   /*background-image: url(../images/home/me-hike.jpg);*/
-  background-color: #efefef;
+  /*background-color: #f7f7f7;*/
   /*background-image: linear-gradient(200deg, #0caaa2 10%, #e5e5e5 99%);*/
   background-size: cover;
   height: 60vh; /*400px*/
@@ -214,6 +253,83 @@ p {
   -o-background-size: cover;
   background-size: cover;
 }
+
+/* RESPONSIVENESS */
+/* Larger than mobile */
+@media (min-width: 400px) {
+  header h2 { 
+  margin-top: 40%;
+  }
+  .firstbreak {
+    display: static;
+  }
+  .navbar-item {
+    display: none;
+  }
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  .hamburger {
+   display:none;
+   }
+  .secondbreak {
+    display: static;
+  }
+  .navbar-item {
+    display: inline-block;
+  }
+  .project {
+    height: 300px;
+  }
+  .alignleft {
+    text-align: left;
+    padding-left: 15px;
+  }
+  .alignright {
+    text-align: right;
+    padding-right: 15px;
+  }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  .navbar-item {
+    display: inline-block;
+  }
+  header h2 { 
+    margin-top: 20%;
+  }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  .navbar-item {
+    display: inline-block;
+  }
+   header h2 { 
+    margin-top: 20%;
+  }
+   .project img {
+    width: 318px;
+  }
+  
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+  .navbar-item {
+    display: inline-block;
+  }
+  header h2 { 
+    margin-top: 25%;
+  }
+ 
+}
+
+
+
+
 
 
 /* For devices larger than 400px */
