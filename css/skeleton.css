@@ -212,7 +212,7 @@ p {
 }
 
 
-.aboutme {
+.about {
   position: relative;
   /*background-image: url(../images/home/me-hike.jpg);*/
   /*background-color: #f7f7f7;*/
@@ -226,14 +226,14 @@ p {
   padding-top: 60px;
 }
 
-.aboutme img {
+.about img {
   height: 90px;
 }
 .img-circle {
     border-radius: 50%;
 }
 
-.aboutme a.btn-outline {
+.about a.btn-outline {
   padding: 10px 15px;
   border-radius: 3px;
   text-decoration: none;
