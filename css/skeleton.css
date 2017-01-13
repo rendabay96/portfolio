@@ -64,30 +64,53 @@ h4 {
 /* HEADER and NAVBAR 
 _________________________________________________________________*/
 
+.footer {
+  height: 50px;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+}
+
+.footer p{
+  font-size: .7em;
+  display: inline-block;
+}
+.footer-nav-item {
+  position: relative;
+  float: right;
+  z-index: 99;
+}
+
+.footer-nav-item img {
+    width: 25px;
+    margin-left: 25px;
+}
+
+
 header {
   width: 100vw;
-  height: 100vh;
-  background: url("../images/home/purple-oj-hike.png") no-repeat center center fixed;
+  height: 60vh;
+  background: url("../images/home/purple-oj-hike-small.png") no-repeat center center fixed;
   background-size: cover;
-
   /*background: url(../images/home/teal-blue-hike.png) no-repeat center center fixed;*/
 }
 #cover { 
   background-size: cover; 
 }
 
-header h2 {
+/*header h2 {
   color: #ffffff;
   margin-top: 10%;
   
-}
+}*/
 
 .navbar {
   display: block;
   width: 100%;
   height: 6rem;
   z-index: 90;
-  background-color: rgba(193,66,66,0.2); /*(12,170,162,0.5);(52,43,127,0.5);*/
+  /*background-color: rgba(193,66,66,0.2); /*#1F1F2C;(12,170,162,0.5);(52,43,127,0.5);*/
   margin-top: 0px;
 }
 
@@ -118,7 +141,7 @@ header h2 {
   z-index: 99;
 }
 
-.navbar-item ul > li { /*parent ul, child li. remove bullets with list style type non */
+.navbar-item ul > li { 
    list-style-type: none;
    display: inline-block;
    font-size: 16px;
@@ -133,14 +156,14 @@ header h2 {
     color: #ffffff;
 }
 
-header h4 {
+/*header h4 {
   color: #ffffff;
   font-family: "Source Sans Pro", "roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   margin-bottom: 2rem;
   margin-top: 200px;
 
-}
+}*/
 
 
 header .hero a.btn-outline {
@@ -162,6 +185,7 @@ header nav ul > li.btn-outline: hover > a {
 */
 .hero {
   text-align: center;
+  padding-top: 30px;
 }
 
 
@@ -171,7 +195,7 @@ header nav ul > li.btn-outline: hover > a {
 .project {
   position: relative;
   
-  height: 500px;
+  height: 600px;
   width: 100vw;
   text-align: center;
   padding-top: 50px;
@@ -214,11 +238,8 @@ p {
 
 .about {
   position: relative;
-  /*background-image: url(../images/home/me-hike.jpg);*/
-  /*background-color: #f7f7f7;*/
-  /*background-image: linear-gradient(200deg, #0caaa2 10%, #e5e5e5 99%);*/
   background-size: cover;
-  height: 60vh; /*400px*/
+  height: 380px;
   width: 100vw;
   text-align: center;
   margin-top: 50px;
@@ -242,24 +263,35 @@ p {
 
 }
 
-.my-bio {
+/* About Me ------------ */
+.about-header {
   width: 100vw;
-  height: 70vh;
-  background: url("../images/about/me-hike.jpg") no-repeat center center fixed;
-  background-size: cover;
-  /*background: url(../images/home/teal-blue-hike.png) no-repeat center center fixed;*/
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  height: 60vh;
+  background-image: url(../images/about/me-hike.png);
   background-size: cover;
 }
+
+.content {
+  margin: 10%;
+}
+.content h4 {
+  text-align: center;
+}
+body img {
+  max-width: 100%;
+}
+
+
+
+
+
 
 /* RESPONSIVENESS */
 /* Larger than mobile */
 @media (min-width: 400px) {
-  header h2 { 
+  /*header h2 { 
   margin-top: 40%;
-  }
+  }*/
   .firstbreak {
     display: static;
   }
@@ -279,9 +311,7 @@ p {
   .navbar-item {
     display: inline-block;
   }
-  .project {
-    height: 300px;
-  }
+ 
   .alignleft {
     text-align: left;
     padding-left: 15px;
@@ -290,6 +320,9 @@ p {
     text-align: right;
     padding-right: 15px;
   }
+  .project {
+    height: 380px;
+  }
 }
 
 /* Larger than tablet */
@@ -297,8 +330,12 @@ p {
   .navbar-item {
     display: inline-block;
   }
-  header h2 { 
+  /*header h2 { 
     margin-top: 20%;
+  }*/
+
+  .project img {
+    width: 280px;
   }
 }
 
@@ -307,11 +344,11 @@ p {
   .navbar-item {
     display: inline-block;
   }
-   header h2 { 
+   /*header h2 { 
     margin-top: 20%;
-  }
+  }*/
    .project img {
-    width: 318px;
+    width: 280px;
   }
   
 }
@@ -321,9 +358,9 @@ p {
   .navbar-item {
     display: inline-block;
   }
-  header h2 { 
+  /*header h2 { 
     margin-top: 25%;
-  }
+  }*/
  
 }
 
