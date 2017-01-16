@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 4032 1008" style="enable-background:new 0 0 4032 1008;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.7;fill:url(#SVGID_1_);}
+</style>
+<image style="overflow:visible;" width="3500" height="2200" xlink:href="../../../../Documents/Bloc Course/FlyTabs/flytabs-header.png"  transform="matrix(1 0 0 1 0 -1192)">
+</image>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1750" y1="1008" x2="1750" y2="-1192">
+	<stop  offset="0.4557" style="stop-color:#632D7F"/>
+	<stop  offset="0.4611" style="stop-color:#612D7D"/>
+	<stop  offset="0.5387" style="stop-color:#492860"/>
+	<stop  offset="0.6214" style="stop-color:#372449"/>
+	<stop  offset="0.7104" style="stop-color:#292139"/>
+	<stop  offset="0.8103" style="stop-color:#21202F"/>
+	<stop  offset="0.9433" style="stop-color:#1F1F2C"/>
+</linearGradient>
+<rect y="-1192" class="st0" width="3500" height="2200"/>
+</svg>
