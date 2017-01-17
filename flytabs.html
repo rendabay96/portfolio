@@ -27,7 +27,7 @@
 <body>
 
   
- <div class="flytabs-header">
+ <div class="flytabs-header" id="cover">
   <!-- Nav Bar-->
       <div class="navbar">
 
@@ -40,29 +40,31 @@
           <div class="navbar-item">
             <ul>
               <li><a href="about.html">about</a></li>
-              <li><a href="index.html#project">work</a></li>
-              <li><a href="BrendaHu_Resume_2017.pdf" target="_blank">resume</a></li>
-              <li><a href="contact.html" class="btn email-me">contact</a></li>
+              <li><a href="index.html">work</a></li>
+              <li><a href="pdfs/BrendaHu_Resume_2017.pdf" target="_blank">resume</a></li>
+              <!--<li><a href="contact.html" class="btn email-me">contact</a></li>-->
             </ul>
           </div>
         </div> 
       </div> 
   
   <!-- Intro -->
- <div class="container">
+ <!--<div class="container">
     <div class="hero" style="margin-top: 10%">
       <h2>FlyTabs - Mobile App</h2>
       <h4>UX Design Concept Project</h4>
     </div>
   </div>
+  -->
 </div>
 
-<img src="images/flytabs/flytabs-main-photo3.png" id="cover">
+<!--<img src="images/flytabs/flytabs-main-photo3.png" id="cover">-->
 <!-- part 1: Intro -->
 <div class="flytabs-intro">
 <div class="content">
 <div class="container">
-  <h2>Traveling in The Social Media Era</h2>
+  <h2>FlyTabs - Mobile App</h2>
+  <h5>UX Design Concept Project</h5>
   <p>People of all generations can attest that the world has never felt smaller than it does today. Not only are we inextricably linked through social media, our constant exposure to one another’s travel destinations inspire us to plan our next excursions with our favorite people. Having witnessed various ways people plan their individual as well as group travels, I saw the potential in designing a more streamlined and social process for organizing trips.  </p>
 </div>
 </div>
@@ -90,25 +92,125 @@
 <div class="content2">
 <div class="row">
 <div class="container">
-    <p>Much of the results regarding how the users typically booked trips were as I suspected. 9 out of 11 people surveyed usually plan trips with 2 or more people. Of those people:</p>
-    <ul>
+    <p>Much of the results regarding how the users typically booked trips were as I suspected. 9 out of 11 people surveyed usually plan trips with 2 or more people. Of those people 100% of respondents selected Facebook as their current preferred method for planning a group trip. However, when asked what additional features they wished to see in a new group travel planning app, I received the following:</p>
+    <!--<ul>
       <li>70% indicated they prioritize finding the lowest cost flights, being on the same flight if possible, and sharing the group travel itinerary.</li>
       <li>100% share the flight and hotel options with each other, all of which indicated Facebook as their preferred method of sharing</li>
       <li>89% want the option to organize trips by name within a travel app</li>
       <li>78% want the option to share flight and lodging search results with group members via email or social media</li>
       <li>78% want the option to enable in-app price tracking</li>
       <li>67% want the option of flight searches to display flexible dates</li>
+    </ul>-->
+
+<table>
+        <thead>
+          <tr>
+              <th>Proposed Feature Selected</th>
+              <th>% of Respondents</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Ability to share a group travel itinerary</td>
+            <td>70</td>
+          </tr>
+          <tr>
+            <td>Ability to book the same flights and/or hotels</td>
+            <td>70</td>
+          </tr>
+          <tr>
+            <td>Enable price tracking</td>
+            <td>78</td>
+          </tr>
+          <tr>
+            <td>Ability to share and discuss trip details with group members</td>
+            <td>78</td>
+          </tr>
+          <tr>
+            <td>Ability to organize trips by name</td>
+            <td>89</td>
+          </tr>
+        </tbody>
+      </table>
+                
+
+</div>
+</div>
+</div>
+
+<div class="content">
+<div class="row">
+<div class="container">
+When asked how each of them saves their preferred flight or hotel search results, I received many different answers:
+<p>
+ <!-- <div class="three columns quotes">
+    <p>"...bookmark it"</p>
+    <p>"...e-mail the link to myself"</p>
+    <p>"...take a screenshot"</p>
+  </div>
+  <div class="three columns quotes">
+    <p>"...copy and paste the link to my notes app"</p>
+    <p>"...keep the tab open on my browser"</p>
+  </div>
+  <div class="three columns quotes">
+    <p>"...favorite the search result on the website"</p>
+    <p>"...post the link to the Facebook group"</p>
+  </div>
+-->
+    <ul style="list-style: none;" class="quotes">
+      <li>"...bookmark it"</li>
+      <li>"...e-mail the link to myself"</li>
+      <li>"...take a screenshot"</li>
+      <li>"...copy and paste the link to my notes app"</li>
+      <li>"...keep the tab open on my browser"</li>
+      <li>"...favorite the search result on the website"</li>
+      <li>"...post the link to the Facebook group"</li>
     </ul>
-    
+<p>Surely there must be a better way!</p>
+  
+
 </div>
 </div>
 </div>
 
+<div class="problem">
+<div class="row">
+<div class="container">
+    <h4>Recognize The Problem</h4>
+    <p>According to the respondents, while planning a trip for oneself was easy enough, doing so for a group has always been a cumbersome process. Initially, my vision for FlyTabs was a new tool that maintained all functions of a typical travel app (search, save, and book flights and hotels) with the added convenience of message integration to help users share and interact with friends. However, I realized after speaking with potential users that the design challenge lied not with improving the booking process, but within the collaborative planning phase of a group trip.</p>
+</div>
+</div>
+</div>
 
+<div class="content">
+<div class="row">
+<div class="container">
+    <h4>Personas</h4>
+    <p>In addition to analyzing the survey data, I interviewed my respondents so that they can elaborate on their specific needs. Along with the usual search engine attributes, users are eager for a search and book engine to offer the organizational and social aspects of FlyTabs to ease the group trip planning process. From here I continued to design a solution with these personas in mind. </p>
+    <p>View the personas <a href="pdfs/FlyTabs-personas.pdf" target="_blank">here.</a></p>
+    <p>
+    <img src="images/flytabs/FlyTabs-personas2.png"></p> 
+
+</div>
+</div>
+</div>
 
 
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<div class="container">
+  <div class="footer">
+  <p>&copy; 2017 Brenda Hu</p>
+    <div class="footer-nav-item">
+        <a href="https://www.linkedin.com/in/brenda-hu"><img src="images/logo/linkedin.png"></a>
+        <a href="https://www.linkedin.com/in/brenda-hu"><img src="images/logo/github.png"></a>
+        <a href=""><img src="images/logo/email.png"></a>
+    </div>
+
+  </div>
+</div>
 </body>
 </html>

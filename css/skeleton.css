@@ -285,8 +285,8 @@ a.btn-outline:hover {
 }
 
 .content {
-  padding: 50px, 100px;
-  text-align: left;
+  padding: 50px 0px 50px 0px;
+  text-align: justify;
 }
 .content h2 {
   color: #1F1F2C;
@@ -294,14 +294,16 @@ a.btn-outline:hover {
 
 
 .content2 {
-  padding-top: 50px;
+  padding: 50px 0px 50px 0px;
   background-color: #f7f7f7;
   text-align: left;
 }
 
 .content2 ul, ol {
-  margin-left: 5%;
+  margin-left: 10%;
+  list-style-position: outside;
 }
+
 
 
 body img {
@@ -310,10 +312,9 @@ body img {
 
 .flytabs-header {
   width: 100vw;
-  height: 60vh;
-  background: url("../images/flytabs/flytabs-header5.png"); 
-  background-size: cover;
-
+  height: 90vh;
+  /*background: url("../images/flytabs/flytabs-header-teal.png") center fixed; */
+  background: url("../images/flytabs/flytabs-main-photo1.png") center;
 }
 .flytabs-intro {
   background: #1f1f2c;
@@ -322,13 +323,33 @@ body img {
 }
 
 .flytabs-intro h2 {
-  color: #ffffff;
+  color: #f7f7f7;
+  text-align: center;
+}
+.flytabs-intro h5 {
+  color: #f7f7f7;
+  text-align: center;
 }
 .flytabs-intro p {
-  color: #ffffff;
+  color: #f7f7f7;
+}
+.problem {
+  background: url("../images/flytabs/flytabs-problem.png") center fixed; 
+  background-size: cover;
+  padding: 50px 0px 50px 0px;
+  text-align: left;
+}
+.problem h4 {
+  color: #f7f7f7;
+}
+.problem p {
+  color: #f7f7f7;
 }
 
-
+.quotes {
+  color: #0caaa2;
+  margin-left: 10%;
+}
 
 
 
@@ -397,12 +418,18 @@ body img {
    .project img {
     width: 280px;
   }
-  .content {
+  .content,
+  .content2,
+  .problem
+  {
     padding: 50px 200px 50px 200px;
   }
-  .content2 {
+  /*.content2 {
     padding: 50px 200px 50px 200px;
   }
+  .problem {
+  padding: 50px 200px 50px 200px;
+}*/
 }
 
 /* Larger than Desktop HD */
@@ -503,7 +530,7 @@ html {
 body {
   font-size: 2.3em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.8;
-  /*font-weight: 100;*/
+  font-weight: 500;
   font-family: "Source Sans Pro", "Cabin", sans-serif;
   color: #1F1F2C; }
   
@@ -710,6 +737,8 @@ pre > code {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 th,
 td {
+  
+  font-size: 16px;
   padding: 12px 15px;
   text-align: left;
   border-bottom: 1px solid #E1E1E1; }
