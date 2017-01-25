@@ -290,7 +290,9 @@ h1 {
   color: #1F1F2C;
 }
 
-
+.medium {
+  width: 75%;
+}
 
 .content2 {
   padding: 50px 0px 50px 0px;
@@ -303,7 +305,17 @@ h1 {
   list-style-position: outside;
 }
 
+.content2 ul {
+  margin-left: 10%;
+  list-style-position: outside;
+}
+
 .content2 img {
+  display: block;
+  margin: auto;
+}
+
+.content img {
   display: block;
   margin: auto;
 }
@@ -323,6 +335,7 @@ body img {
   text-align: center;
   position: absolute;
   bottom: 0;
+
 }
 .case-header-content h1{
   color: #f7f7f7;
@@ -336,7 +349,13 @@ body img {
   color: #f7f7f7;
   text-align: justify;
 }
-.problem {
+.flytabs-problem {
+  background: url("../images/flytabs/flytabs-header-teal.png") center fixed; 
+  background-size: cover;
+  padding: 50px 0px 50px 0px;
+  text-align: left;
+}
+.flytabs-solution {
   background: url("../images/flytabs/flytabs-problem.png") center fixed; 
   background-size: cover;
   padding: 50px 0px 50px 0px;
@@ -351,7 +370,9 @@ body img {
 
 .quotes {
   color: #0caaa2;
-  text-align: center;
+}
+.bold {
+  font-weight: bold;
 }
 
 .largequotes {
@@ -549,7 +570,7 @@ body {
     display: inline-block;
   }
   body {
-    font-size: 2.2em;
+    font-size: 2.0em;
 
   }
 }
