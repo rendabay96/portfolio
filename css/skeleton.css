@@ -105,8 +105,24 @@ header {
   height: 60vh;
   background: url("../images/home/purple-oj-hike-small.png") no-repeat center center fixed;
   background-size: cover;
+  position: relative;
+  color: #ffffff;
   /*background: url(../images/home/teal-blue-hike.png) no-repeat center center fixed;*/
 }
+.hero {
+  position: absolute;
+  text-align: center;
+  height: 60vh;
+  width: 100%;
+  display: table;
+}
+.hero h4 {
+  color: #ffffff;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
 #cover { 
   background-size: cover; 
 }
@@ -120,8 +136,8 @@ header {
 .navbar {
   display: block;
   width: 100%;
-  height: 6rem;
   z-index: 90;
+  height: 0px; /*but this makes logo unclickable*/
   /*background-color: rgba(193,66,66,0.2); /*#1F1F2C;(12,170,162,0.5);(52,43,127,0.5);*/
   margin-top: 0px;
 }
@@ -181,23 +197,6 @@ header {
 }*/
 
 
-header .hero a.btn-outline {
-   padding: 10px 15px;
-   border-radius: 3px;
-   text-decoration: none;
-   color: #ffffff;
-   border: 1px solid #ffffff; /*#00FFC5;*/
-
-}
-
-
-.hero {
-  text-align: center;
-  padding-top: 50px;
-}
-.hero h4{
-  color: #ffffff;
-}
 
 
 
@@ -285,7 +284,7 @@ a.tealbutton:hover:before {
 
 /* About Me ------------ */
 .about-header {
-  width: 100vw;
+  width: 100%;
   height: 60vh;
   background: url("../images/about/aboutme-header.png") no-repeat center center fixed;
 }
