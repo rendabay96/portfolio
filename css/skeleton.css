@@ -149,6 +149,7 @@ header {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   z-index: 99;
+  display: inline-block;
 
 }
 .navbar-logo img {
@@ -162,6 +163,7 @@ header {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   z-index: 99;
+  display: inline-block;
 }
 
 .navbar-item ul > li {
