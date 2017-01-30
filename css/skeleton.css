@@ -101,6 +101,7 @@ header {
   background: url("../images/home/purple-oj-hike-small.png") no-repeat center center fixed;
   position: relative;
   color: #ffffff;
+  background-size: contain;
   /*background: url(../images/home/teal-blue-hike.png) no-repeat center center fixed;*/
 }
 .hero {
@@ -158,12 +159,12 @@ header {
 }
 
 .navbar-item {
-  position: relative;
-  float: right;
+  position: absolute;
+  right: 0;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   z-index: 99;
-  display: inline-block;
+
 }
 
 .navbar-item ul > li {
