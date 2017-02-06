@@ -5,6 +5,7 @@ ________________________*/
 @import url(https://fonts.googleapis.com/css?family=Lora);
 @import url(https://fonts.googleapis.com/css?family=Cabin);
 @import url(https://fonts.googleapis.com/css?family=PT+Serif);
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
 
 
 /* Grid
@@ -32,21 +33,21 @@ ________________________*/
 
 h1 {
   color: #ffffff;
-  font-family: "Merriweather", "PT Serif", "Lora", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  font-family: "Raleway", "Futura", "Merriweather", "PT Serif", "Lora", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-weight: bold;*/
 
 }
 
 h4 {
   color: #1F1F2C;
-  font-family: "Merriweather", "PT Serif", "Lora", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  font-family: "Raleway", "Futura", "Merriweather", "PT Serif", "Lora", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-weight: bold;*/
 
 }
 
 h5 {
   color: #666666;
-  font-family: "Merriweather", "PT Serif", "Lora", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Raleway", "Futura", "Merriweather", "PT Serif", "Lora", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* HEADER, FOOTER, NAVBAR
@@ -78,23 +79,23 @@ _________________________________________________________________*/
 
 header {
   width: 100vw;
-  height: 60vh;
-  background: url("../images/home/purple-oj-hike-small.png") no-repeat center center fixed;
+  height: 70vh;
+  background: url("../images/home/hike.png") no-repeat center center fixed;
   position: relative;
   color: #ffffff;
-  background-size: contain;
+  background-size: cover;
   /*background: url(../images/home/teal-blue-hike.png) no-repeat center center fixed;*/
 }
 .hero {
   position: absolute;
   text-align: center;
-  height: 60vh;
+  height: 70vh;
   width: 100%;
   display: table;
   top: 0;
 }
 .hero h4 {
-  color: #ffffff;
+  color: #1F1F2C;
   display: table-cell;
   vertical-align: middle;
 }
@@ -163,7 +164,7 @@ header {
     color: #ffffff;
 }
 .navbar-item ul > li > a:hover {
-  color: #9bfef3; }
+  color: #0ecac0;/*#9bfef3;*/ }
 
 
 /* PROJECTS __________________________________________________*/
@@ -556,7 +557,7 @@ html {
 body {
   font-size: 1.8em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.8em;
-  font-weight: 500;
+  /*font-weight: 500;*/
   font-family: "Source Sans Pro", "Cabin", sans-serif;
   color: #1F1F2C; }
 
