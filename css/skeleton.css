@@ -164,7 +164,7 @@ header {
     color: #ffffff;
 }
 .navbar-item ul > li > a:hover {
-  color: #0ecac0;/*#9bfef3;*/ }
+  color: #0caaa2;/*#9bfef3;*/ }
 
 
 /* PROJECTS __________________________________________________*/
@@ -373,7 +373,7 @@ body img {
 header {
   width: 100vw;
   height: 70vh;
-  background: url("../images/home/hike5.png") no-repeat center center fixed;
+  background: url("../images/home/hike.png") no-repeat center center fixed;
   position: relative;
   color: #ffffff;
   background-size: cover;
