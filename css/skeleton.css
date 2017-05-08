@@ -335,6 +335,13 @@ body img {
   padding: 50px 0px 50px 0px;
   text-align: left;
 }
+.moshu-problem {
+  background: url("../images/moshu/online-shopping.jpg") center fixed;
+  background-size: cover;
+  padding: 50px 0px 50px 0px;
+  text-align: left;
+}
+
 .flytabs-solution {
   background: url("../images/flytabs/flytabs-problem.png") center fixed;
   background-size: cover;
@@ -343,6 +350,7 @@ body img {
 }
 .problem {
   background-color: #1F1F2C;
+    padding: 50px 0px 50px 0px;
 }
 .problem h1 {
   color: #f7f7f7;
