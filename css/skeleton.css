@@ -91,7 +91,7 @@ header {
     clip-path: polygon(0% 90%, 22% 95%, 44% 92%, 59% 93%, 76% 95%, 100% 90%, 100% 0%, 0% 0%)
 }
 .hero {
-  position: absolute;
+  position: relative;
   text-align: left;
   height: 85vh;
   width: 100%;
@@ -279,6 +279,10 @@ a.tealbutton:hover:before {
 
 .about img {
   height: 90px;
+    margin: 50px 0;
+}
+.about-collage {
+    margin: 50px 0;
 }
 .img-circle {
     border-radius: 50%;
@@ -352,12 +356,12 @@ body img {
 
 .flytabs-header {
   width: 100%;
-  height: 130vh;
+  height: auto;
   background: url("../images/flytabs/flytabs-main-photo2 copy.png") center;
 }
 .moshu-header {
   width: 100%;
-  height: 100vh;
+  height: auto;
   background: url("../images/moshu/moshu-header3.png") center;
 }
 .case-header-content {
@@ -429,7 +433,7 @@ body img {
 /* RESPONSIVENESS */
 
 /* Larger than mobile */
-@media (max-width: 410px) {
+/*@media (max-width: 410px) {
     .moshu-header {
   width: 100%;
   height: 195vh;
@@ -438,14 +442,14 @@ body img {
     .navbar-item2 {
         margin-right: 20px;
     }
-}
+}*/
 @media (min-width: 310px) {
 header {
   width: 100vw;
     height: 100vh;
     background: url(../images/home/hike4e.png) no-repeat center center fixed;
     /* background-position: right 0px; */
-    position: relative;
+    position: relative !important;
     color: #ffffff;
     background-size: cover;
     /* margin: 0 50px 0 50px; */
@@ -466,9 +470,10 @@ header {
   .case-header-content {
     color: #f7f7f7;
     text-align: center;
-    position: absolute;
+    position: relative !important;
     width: 100%;
     bottom: 0;
+      padding-top: 30%;
 
   }
 }
@@ -502,7 +507,7 @@ header {
   }
   .flytabs-header {
     width: 100%;
-    height: 100vh;
+    height: auto;
     background: url("../images/flytabs/flytabs-main-photo2.png") center;
   }
 
@@ -571,7 +576,7 @@ header {
 header {
   width: 100vw;
     height: 100vh;
-    background: url(../images/home/hike4e.png) no-repeat -650px center fixed;
+    background: url(../images/home/hike4e.png) no-repeat -400px center fixed;
     /* background-position: right 0px; */
     position: relative;
     color: #ffffff;
@@ -579,8 +584,19 @@ header {
     /* margin: 0 50px 0 50px; */
     /* background: url(../images/home/teal-blue-hike.png) no-repeat center center fixed; */
 }
+    .navbar {
+    padding: 0 20px 0 0;
+    box-sizing: border-box;
+        position: fixed !important;
+        z-index: 9999999;
 }
-
+     .navbar2 {
+    padding: 0 20px 0 0;
+    box-sizing: border-box;
+         position: fixed !important;
+         z-index: 99999999;
+}
+}
 
 
 
