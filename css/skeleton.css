@@ -80,10 +80,10 @@ _________________________________________________________________*/
 header {
       width: 100vw;
     height: 100vh;
-    background: url(../images/home/hike4e.png) no-repeat center 60px fixed;
+    background: url(../images/home/hike4e.png) no-repeat center center fixed;
     position: relative;
     color: #ffffff;
-    background-size: contain;
+    background-size: cover;
     /* -webkit-clip-path: polygon(0% 84%, 34% 92%, 72% 84%, 100% 87%, 100% 0%, 0% 0%); */
     /* clip-path: polygon(0% 84%, 34% 92%, 72% 84%, 100% 87%, 100% 0%, 0% 0%); */
     -webkit-clip-path: polygon(0% 90%, 22% 95%, 44% 92%, 59% 93%, 76% 95%, 100% 90%, 100% 0%, 0% 0%);
@@ -449,7 +449,7 @@ header {
     position: relative !important;
     color: #ffffff;
     background-size: cover;
-    background: url(../images/home/hike4e.png) no-repeat -600px 0px fixed !important;
+   /*background: url(../images/home/hike4e.png) no-repeat center 0px fixed !important;*/
     
 }
 .navbar-item,
@@ -570,11 +570,11 @@ header {
 }*/
 
 @media (max-width: 420px) {
-header {
+/*header {
     background: url(../images/home/hike4e.png) no-repeat -630px center fixed !important;
     position: relative;
     background-size: cover;
-}
+}*/
     .navbar {
     padding: 0 20px 0 0;
     box-sizing: border-box;
