@@ -80,7 +80,7 @@ _________________________________________________________________*/
 header {
       width: 100vw;
     height: 100vh;
-    background: url(../images/home/hike4.png) no-repeat center 60px fixed;
+    background: url(../images/home/hike4e.png) no-repeat center 60px fixed;
     background-position: center 0px;
     position: relative;
     color: #ffffff;
@@ -447,13 +447,10 @@ body img {
 header {
   width: 100vw;
     height: 100vh;
-    background: url(../images/home/hike4e.png) no-repeat center center fixed;
-    /* background-position: right 0px; */
     position: relative !important;
     color: #ffffff;
     background-size: cover;
-    /* margin: 0 50px 0 50px; */
-    /* background: url(../images/home/teal-blue-hike.png) no-repeat center center fixed; */
+    
 }
 .navbar-item,
 .navbar-item2 
@@ -572,17 +569,14 @@ header {
 }
 }*/
 
-@media (max-width: 420px) {
+/*@media (max-width: 420px) {
 header {
   width: 100vw;
     height: 100vh;
-    background: url(../images/home/hike4e.png) no-repeat -400px center fixed;
-    /* background-position: right 0px; */
+    background: url(../images/home/hike4e.png) no-repeat -400px 0px fixed !important;
     position: relative;
     color: #ffffff;
     background-size: cover;
-    /* margin: 0 50px 0 50px; */
-    /* background: url(../images/home/teal-blue-hike.png) no-repeat center center fixed; */
 }
     .navbar {
     padding: 0 20px 0 0;
@@ -596,7 +590,7 @@ header {
          position: fixed !important;
          z-index: 99999999;
 }
-}
+}*/
 
 
 
