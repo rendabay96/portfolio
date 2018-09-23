@@ -1,0 +1,51 @@
+.iab {
+    float: left;
+    height: 600px;
+    width: 160px;
+    margin: 0;
+    background: #9AD8ED;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+.iabIllustration {
+    background: url(../images/iab-illustration2.png);
+    background-size: cover;
+    height: 145px;
+    width: 160px;
+    z-index: 100 !important;
+    display: block;
+    position: relative;
+}
+.iabContent {
+    height: 455px;
+    width: 160px;
+    position: relative;
+    background: #fff;
+}
+#clouds {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background: url(../images/iab-clouds.png);
+    background-size: cover;
+    height: 30px;
+    width: 150px;
+    z-index: 2 !important;
+    -webkit-animation: moveclouds 10s linear infinite;
+    -moz-animation: moveclouds 10s linear infinite;
+    -o-animation: moveclouds 10s linear infinite;
+    overflow: hidden !important;
+}
+
+
+@-webkit-keyframes moveclouds {
+	0% {margin-left: 100px;}
+	100% {margin-left: -50px;}
+}
+@-moz-keyframes moveclouds {
+	0% {margin-left: 100px;}
+	100% {margin-left: -50px;}
+}
+@-o-keyframes moveclouds {
+	0% {margin-left: 100px;}
+	100% {margin-left: -50px;}
+}
