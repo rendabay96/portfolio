@@ -592,10 +592,14 @@ ul.checklist > li.xmark::before {
         padding: 0px 40px;
     }
  
-    .navbar {
+    .navbar,
+    .footer {
         width: 82%;
         min-width: 100px;
     }
+    .footerright img {
+    margin: 8px 0 0 14px;
+}
     .four.columns a,
     .four.columns p {
     margin-bottom: 80px;
