@@ -615,11 +615,14 @@ ol.default-bullets > li {
     }
     .footerright img {
     margin: 8px 0 0 14px;
-}
+    }
     .four.columns a,
-    .four.columns p {
+    /*.four.columns p*/ {
     margin-bottom: 80px;
-}
+    }
+    .project-link {
+    margin-bottom: 80px;   
+    }
     /*case studies*/
     ul.checklist {
         padding-left: 10px;
