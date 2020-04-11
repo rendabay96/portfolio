@@ -38,6 +38,13 @@ a:hover {
     transition: 0.3s;
     opacity: 0.7;
 }
+.image-captions
+{
+    opacity: 0.5;
+    font-style: italic;
+    text-align: center;
+    margin-top: -32px;
+}
 
 /* Navbar -------------------------- */
 
@@ -252,11 +259,7 @@ img {
     width: 100%;
     height: auto;
 }
-img.comingsoon:hover {
-    opacity: 0.6;
-    transition: 0.3s;
-    cursor: pointer;
-}
+
 .fullwidth1,
 .fullwidth2 {
     width: 100%;
@@ -348,17 +351,20 @@ span.hero-text {
     color: rgba(31, 31, 44, 0.7)
 }
 
-.comingsoon span {
+.comingsoon {
     position: absolute;
+    opacity: 0;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #ffffff;
+    color: #1f1f2f;
 }
-
+.comingsoon:hover {
+    opacity: 0.5;
+}
 
 #aboutme {
     text-align: center;
@@ -438,13 +444,16 @@ span.project-hero-text {
 .projects1 img,
 .projects1 video,
 .projects2 img,
-.projects2 video {
+.projects2 video
+.projects3 img,
+.projects3 video {
     width: 90%;
     margin: 56px auto;
     display: block;
 }
 .quotes {
     color: #57577C;
+    opacity: 0.8;
     text-align: center;
 }
 .quotes > ul {
@@ -496,7 +505,14 @@ ul.checklist > li.xmark::before {
     background: url(../images/icon_xmark.svg) center no-repeat;
 }
 
-
+ul.default-bullets,
+ol.default-bullets {
+    padding: 0 48px;
+}
+ul.default-bullets > li,
+ol.default-bullets > li {
+    margin-bottom: 12px;
+}
 
 /* For devices larger than 550px */
 @media (min-width: 550px) {

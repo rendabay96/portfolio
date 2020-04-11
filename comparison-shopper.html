@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Brenda Hu - UX/UI Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="images/black2_logo-new.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    
+</head>
+<body>
+    <!-- Nav Bar-->
+    <div class="navbarDark">
+        <div class="navbar">
+            <div class="navleft">
+                <a href="index.html">
+                    <img class="navIconDark" src="images/fff-logo-new.svg">
+                    <img class="navIconLight" src="images/000-logo-new.svg">
+                </a>
+            </div>
+            <div class="navright">
+                <ul>
+                    <li><a href="index.html#aboutme">about</a></li>
+                    <li><a href="index.html#BH_work">work</a></li>
+                    <li><a href="pdfs/BrendaHu-Resume-2020.pdf#zoom=60" target="_blank">resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header-->
+    <div class="project-header">
+    <div class="container">
+        <div class="project-hero">
+       <span class="project-hero-text">
+           <h4>UX/UI</h4>
+           <h1>Comparison Shopping Assistant</h1>
+           My team was tasked to redesign our most profitable Comparison Shopping product responsible for 60% of revenue. The objective was to create an intuitive UI allowing more complex auction dynamics while significantly improving usability.</span>
+        </div>
+    </div>
+    </div>
+<div class="projects1">
+    <div class="container">
+        <h4>Introduction</h4> 
+        <h3>The Original "Tab Compare"</h3>
+        If you have ever shopped for travel on sites like Expedia, you may have come across some version of the following product in the past. With an interface resembling 2 browser tabs next to each other, this unit is known as Tab Compare. It allows the user to compare rates between two travel sites in one window to assist with comparison shopping - something that almost all of our users have reported doing when shopping for flights and hotels.
+
+    <img src="images/comparison-shopper/tab-compare.png">
+    <p class="image-captions">The original Tab Compare, which we were tasked to redesign, allows users to compare travel rates (e.g. flights, hotels, and cars) from 2 sites in a single window.</p>
+    <br>
+        Tab Compare presents itself to a travel site visitor who is leaving the site, capturing otherwise bouncing traffic by advertising alternative flight, hotel, and car rental options. For this product update at Intent, a data science company that partners with a global network of leading travel sites, we wanted to revamp Tab Compare’s intuitiveness and end user experience. 
+    </div>
+
+</div>
+
+<div class="projects1">
+    <div class="container">
+        <h4>Getting Started</h4> 
+        <h3>User Research</h3>
+        We conducted several usability tests to gather data on how to improve Tab Compare and learned that 50% of them associated the experience with an ad; some shrewdly called it “targeted advertising” or a “cart abandonment tactic.” Despite this assumption, most found the experience useful because it featured sites they were familiar with, with their most recent search (e.g. hotels in Las Vegas) already populated on the featured sites.
+        <img style="max-width: 500px;" src="images/comparison-shopper/TC-qualdata-1.png">
+        When it came to desired functionality and basic usability, however, we observed many pain points below:
+        <div class="quotes">
+            <ul>
+                <li>“The content is a little small...would prefer one screen,”</li>
+                <br>
+                <li>“Can I choose a different site?”</li>
+                <br>
+                <li>“It’s a time saver, but there’s a lot of info so it’s hard to read”</li>
+                <br>
+                <li>“Too busy, too much going on at one time...if you know what you’re looking for it’s not useful, just noise.”</li>
+                <br>
+                <li>“It’s annoying to have to enter dates on every site,”</li>
+            </ul>
+        </div>
+        <br>
+        In one session, the user did not even realize there were two different sites displayed, which we predicted was due to the current lack of visual separation between the two sites. These were all crucial pieces of feedback we referenced to brainstorm a more user-focused, sleeker comparison tool that eases the travel shopping experience, boosts interaction rate, and ultimately lifts conversion rates for our partners.
+
+    </div>
+</div>
+
+<div class="projects2">
+    <div class="container">
+        <h4>Ideation</h4>
+        <h3>Improving Comparison Shopping</h3>
+       	A business requirement was maintaining ability for multiple advertiser sites to be displayed in one browsing session, as each additional site rendered means more revenue. There were a couple insights we pulled in from previous user interviews that were helpful in brainstorming the new design direction for Tab Compare while also fulfilling this requirement. For example, we knew we had to steer clear from anything that resembled our target user’s ultimate nightmare - something that they brought up repeatedly as a top frustration while visiting some e-commerce websites:
+        <img style="max-width: 720px;" src="images/comparison-shopper/popups-galore.png">
+        <p class="image-captions">Look familiar? Stacks of popups opening to an unsuspecting travel site visitor...no thanks!</p>
+        <br>
+        Nothing kills interaction rate more than a bad impression triggering that conditioned response we saw in some of our users, when they closed ads without so much as a glance. Yet, while a high percentage of users felt this strong aversion toward popups, most people’s "magic wand" wish for the optimal shopping experience was still the ability to view all the best deals across sites in one place, so we needed to reconcile these somehow.
+        <br>
+        <br>
+        At this point we hypothesized the following solution to address our users’ priorities in a comparison shopping experience without accidentally reminding them of cringey popups.
+        <br>
+        <br>  
+
+        <h3>Hypothesis</h3>
+        A more customizable comparison shopping experience with the ability to change search intents, select preferred brands, and the toggle the number of sites in view will lead to higher interaction rate and improved monetization.
+    </div>
+</div>
+
+<div class="projects1">
+    <div class="container">
+        <h4>Designing The Experience</h4>
+        <h3>Mocks and Prototypes for "DYO"</h3>
+        A few days rapid iterative design and several usability testing sessions later, we created a new and improved Tab Compare, which we renamed as <b>Dynamic Yield Optimization - or "DYO"</b>. Two major functional improvements we made here were the editable search form and ability to choose which sites to focus on. 
+        <img src="images/comparison-shopper/DYO.png">
+        <p class="image-captions">Tab Compare becomes DYO. Our redesigned product now takes the form of a dynamic set of panes that load advertisers according to what the user selects.</p>
+        <br>
+        <br>
+        In addition to the added ability to swap in and out both the number of sites and the brands they wished to compare, more design enhancements are below:
+        <ul class="checklist">
+            <li class="checkmark"><p>Separate panes to visually differentiate multiple sites being rendered in one window.</p></li>
+            <li class="checkmark"><p>Checkboxes, logos, and enticingly clickable cells to promote comparison shopping utility</p></li>
+            <li class="checkmark"><p>Retrievability and seamless ability to compare up to 4 sites at a time.</p></li>
+            <li class="checkmark"><p>Smooth transition animations to cue hierarchy, functionality, and trustworthiness.</p></li>
+        </ul>
+        <img src="images/comparison-shopper/dyo-demo.gif">
+        <p class="image-captions">DYO, the comparison shopping assistant - now live.</p>
+        <br>
+        After testing this new design of DYO, we received user feedback that proved our solution indeed improved usability substantially, easing some pain points users feel while comparison shopping for travel.
+        <div class="quotes">
+            <ul>
+                <li>“I like this a lot actually...can quickly understand the functionality”</li>
+                <br>
+                <li>"...easy to enter my dates once and do a process of elimination to find the most relevant deal.”</li>
+                <br>
+                <li>“I feel confident choosing a good hotel because I can see all the sites upfront. It’s exactly what I want.”</li>
+            </ul>
+        </div>
+        <br>
+        Needless to say, we were deeply satisfied with the positive reactions here versus the initial feedback we received on our original Tab Compare design!
+    </div>
+</div>
+
+<div class="projects3">
+    <div class="container">
+        <h3>Conclusion</h3>
+        DYO, our new comparison shopping assistant (formerly known as Tab Compare), is currently live on select online travel agencies and vacation rental sites. It presents itself whenever our predictive analytics categorizes a site visitor as unlikely to book in their current browsing session, thus intercepting their exit from a travel site by advertising alternative options offered in our network. While it was a challenge to design a simple UI that intuitively presented a ton of information and increased customizability all at once, early numbers suggest a boost in interaction rates that will lead to a significant upside in revenue for this unit! 
+        <br>
+        <br>
+        We won’t stop there however, and our next steps include iterating the design to improve usability even further. We’re currently testing a feature that allows the user to switch between “Focus mode” and “Compare mode,” cutting down the steps required for someone to view one advertiser’s site at a time or multiple sites at a time. Stay tuned for more developments on our beloved comparison shopping assistant!
+
+
+    </div>
+    </div>    
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/smooth-scroll.js"></script>
+<script src="js/main.js"></script>
+</body>
