@@ -452,10 +452,16 @@ span.project-hero-text {
     margin: 56px auto;
     display: block;
 }
-.quotes {
+.quotes,.pullout-quotes {
     color: #57577C;
     opacity: 0.8;
     text-align: center;
+}
+.pullout-quotes {
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 736px;
+    margin: 42px auto;
 }
 .quotes > ul {
     list-style: none;
@@ -508,7 +514,7 @@ ul.checklist > li.xmark::before {
 
 ul.default-bullets,
 ol.default-bullets {
-    padding: 0 48px;
+    padding: 12px 48px;
 }
 ul.default-bullets > li,
 ol.default-bullets > li {
