@@ -232,7 +232,7 @@ header .container,
     width: 100%;
     height: auto;
     display: table;
-    padding: 80px 20% !important;
+    padding: 80px 10% !important;
     background: #F9F9FB;
 
 }
@@ -515,7 +515,7 @@ ul.checklist > li.xmark::before {
 
 ul.default-bullets,
 ol.default-bullets {
-    padding: 12px 48px;
+    padding: 12px 40px;
 }
 ul.default-bullets > li,
 ol.default-bullets > li {
@@ -574,6 +574,9 @@ ol.default-bullets > li {
      .six.columns h4 {
        margin: 40px 0 -60px 0;
     }
+    ul.default-bullets, ol.default-bullets {
+        padding: 0 24px;
+    }
 }
 @media (min-width: 955px) {
     .splitscreen2 {
@@ -583,7 +586,7 @@ ol.default-bullets > li {
         margin: 0 auto;
         width: 100%;
         height: auto;
-        padding: 80px 10% !important;
+        padding: 80px 16% !important;
         display: table;
     }
     .six.columns {
