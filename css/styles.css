@@ -44,6 +44,7 @@ a:hover {
     font-style: italic;
     text-align: center;
     margin-top: -32px;
+    font-size: 13px;
 }
 
 /* Navbar -------------------------- */
@@ -231,7 +232,7 @@ header .container,
     width: 100%;
     height: auto;
     display: table;
-    padding: 80px 15% !important;
+    padding: 80px 20% !important;
     background: #F9F9FB;
 
 }
