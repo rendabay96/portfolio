@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Brenda Hu - UX/UI Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="images/black2_logo-new.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    
+</head>
+<body>
+    <!-- Nav Bar-->
+    <div class="navbarDark">
+        <div class="navbar">
+            <div class="navleft">
+                <a href="index.html">
+                    <img class="navIconDark" src="images/fff-logo-new.svg">
+                    <img class="navIconLight" src="images/000-logo-new.svg">
+                </a>
+            </div>
+            <div class="navright">
+                <ul>
+                    <li><a href="index.html#aboutme">about</a></li>
+                    <li><a href="index.html#BH_work">work</a></li>
+                    <li><a href="pdfs/BrendaHu-Resume-2020.pdf#zoom=60" target="_blank">resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header-->
+    <div class="project-header">
+    <div class="container">
+        <div class="project-hero">
+       <span class="project-hero-text">
+           <h4>Internal Tool - UX/UI</h4>
+           <h1>Chameleon - Multivariate Testing</h1>
+           At the data science company where I work, our internal ad configuration and multivariate testing tool (called <b>Chameleon</b>) needed a major redesign for our teams to work more scalably as more partners opted into our technology. Not only had technical debt build-up led to diminishing returns when it came to developing new features, our key users were constantly battling inefficiencies while using the tool. As lead designer I owned research and design, working closely with engineers to modernize our multivariate testing tool and processes.</span>
+        </div>
+    </div>
+    </div>
+<div class="projects1">
+    <div class="container">
+        <h4>Getting Started</h4> 
+        <h3>User Research</h3>
+        To kick off discovery for this long-awaited redesign, I interviewed 12 primary users of Chameleon. This included partner integration engineers, PMs, front-end dev teams, and optimization managers - each with their own level of expertise in launching and monitoring multivariate tests (as well as navigating the tool’s shortcomings). 
+        <p>
+            After learning their processes, shadowing their daily workflows, and documenting their frustrations, I imported all raw interview notes into a research repository and developed a qualitative data tagging system.
+
+
+    <img src="images/chameleon/dovetail - search - ss.png">
+    <p class="image-captions">Dovetail, a UX Research repository tool I used to spot trends in pain points such as “inefficiency” and “dependency.”</p>
+    <br>
+        Two of the main insights we synthesized to guide our feature recommendations were:
+        <ol class="default-bullets"> 
+            <li>The Search functionality has to be more robust to return results that users actually care about.</li>
+            <li>To reduce errors caused by redundancy and lack of UI feedback, we should address UX improvements around configuration creation.</li>
+    </div>
+
+</div>
+
+<div class="projects3">
+    <div class="container">
+        <h3>The Objective</h3>
+        From a product strategy perspective, we needed to redesign Chameleon so that we can achieve two main objectives: 1) rewrite the front-end with a modern technology our engineers can own moving forward and 2) improve the UX for our key users and reduce inefficiencies in their test launching workflows. 
+        <p>To achieve our objective we begin by addressing the more pressing user needs and focus on redesigning the Search functionality as well as Configuration Creation.
+    </div>
+</div>
+
+<div class="projects1">
+    <div class="container">
+        <h4>DESIGNING THE EXPERIENCE</h4> 
+        <h3>User Flow</h3>
+        Redesigning Chameleon inevitably involved rebuilding a lot of the functionality that exists today, so to get buy-in from our stakeholders (the team leads and PM) I mapped out the primary user flows along with feature recommendations informed by our user insights above. We used Figma to share the recommendations in the context of the user flow so that the engineers can begin prioritizing.
+        <img src="images/chameleon/figma-userflow.png">
+        <p class="image-captions">Complete user flow + feature update recommendations.</p>
+        <br>
+        <img src="images/chameleon/chameleon-flow.png">
+        <p class="image-captions">The main user flow we will be solving for our MVP.</p>
+        <!--<br>
+        <img src="images/chameleon/chameleon-wireframes.png">
+        <p class="image-captions">Wireframes created on Figma, where the engineer and I can collaborate.</p>-->
+
+
+    </div>
+</div>
+
+<div class="projects2">
+    <div class="container">
+        <h4>USER FLOW #1</h4>
+        <h3>Search Configuration</h3>
+       	Our user research showed that the existing search results page had many shortcomings that slowed our users down when they were searching for specific configurations. 
+    </div>
+</div>
+
+<div class="splitscreen2">
+    <div class="six columns">
+        <img style="border: 1px solid rgba(0,0,0,0.1)" src="images/chameleon/chameleon1-search-ss.png">
+        <br>
+        <br>
+        <p class="image-captions">Original Search page</p>
+    </div>
+    <div class="six columns">
+        <h5>User frustrations:</h5>
+       <ol class="default-bullets">
+            <li><b>Filters:</b> 100% of users expressed the need for more filters. Majority were frustrated with filters lacking text matches at a more granular level. </li>
+            <li><b>List results:</b> Excessive white space limited the number of results in view at a time, especially when expanding cards for context.</li>
+            <li><b>Sorting:</b> Most users desired additional sort features. The learning curve for certain sort metrics also created dependencies.</li>
+        </ol>
+    </div>
+</div>
+<div class="splitscreen2">
+    <div class="six columns">
+        <img style="border: 1px solid rgba(0,0,0,0.1)" src="images/chameleon/chameleon2-search-mock.png">
+        <br>
+        <br>
+        <p class="image-captions">Redesigned Search page</p>
+    </div>
+    <div class="six columns">
+        <h5>Final design for Search</h5>
+       <ol class="default-bullets">
+            <li><b>Filters:</b> We added exclusions, ability to search within JSON strings, and ability to add filters.</li>
+            <li><b>List results:</b> A table format with row items makes scanning for information much easier; more configurations (expanded or not) are within view.</li>
+            <li><b>Sorting:</b> We created additional helpful sort-by features and tooltips on hover for context.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="projects1">
+    <div class="container">
+        <h3>Building + Testing</h3>
+        To build our MVP our engineer and I used the Vuetify framework with ready-made Material Design components. Soon we were able to ship a functioning Search MVP for Chameleon 2.0 and test for initial user feedback. 
+        <img src="images/chameleon/chameleon2-search.gif">
+        <p class="image-captions">Chameleon 2.0 - Search </p>
+        <br>
+        <br>
+        So far the new Search’s positive reception has been validating the new design. It's great to know that we’ve delivered a much more robust Search feature handling thousands of configurations serving custom treatments for our partners sites. 
+        
+        <div class="quotes">
+            <ul>
+                <li>“It’s definitely faster.”</li>
+                <br>
+                <li>It lived up to expectations “based on the mocks we saw.”</li>
+                <br>
+                <li>“This has been a pretty painless transition” so far.</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div class="projects2">
+    <div class="container">
+        <h3>NEXT STEPS</h3>
+        As mentioned, our objective was also to reduce errors caused by redundancy and lack of UI feedback. We had several users voice a similar concern as the below:
+         <p class="pullout-quotes">“The Chameleon process is really complicated, and it is easy to miss a step when setting up a new ad [configuration].”</p>
+        One of the major UX improvements around configuration creation we wanted to focus on was  that of assigning variants (to run multivariate tests). What’s unique about this tool is that it is not simply an A/B testing tool we’re building. Often we test 3+ variants for our partners, so theoretically, the UI must accommodate any number of variants.
+        <img src="images/chameleon/chameleon2-variants.gif">
+        <p class="image-captions">Chameleon 2.0 - Variants </p>
+        We’re in the midst of iterating on a brand new variant flow that reduces the number of steps to get to the final point of setting up test variants. Although we have been usability testing the re-imagined user flow and have received positive feedback on its intuitiveness, our job is far from done. I’m looking forward to analyzing more feedback so we can build out and iterate on the rest of the feature recommendations.
+
+    </div>
+    </div>    
+    
+
+
+<div class="footerGray">
+<div class="footer">
+    <div class="footerleft">
+        <p>&copy; 2020 Brenda Hu</p>
+    </div>
+    <div class="footerright">
+        <a href="https://www.linkedin.com/in/brenda-hu" target="_blank"><img src="images/footer_linkedin.png"></a>
+        <a href="https://github.com/rendabay96" target="_blank"><img src="images/footer_github.png"></a>
+        <a href="https://dribbble.com/rendabay96" target="_blank"><img src="images/footer_dribbble.png"></a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScnMao5JAXZ-tM4Y5qovg7JnWNqDu35r8Vlln3GQf3fQGa0LA/viewform" target="_blank"><img src="images/footer_mail.png"></a>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+    <div style="clear:both;"></div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/smooth-scroll.js"></script>
+<script src="js/main.js"></script>
+
+
+</body>
