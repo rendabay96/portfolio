@@ -16,7 +16,7 @@ h2 {
 }
 h3 {
     font-size: 1.375em;
-    line-height: 1.2em;
+    line-height: 1.4em;
 }
 h4 {
     font-size: 1em;
@@ -34,6 +34,25 @@ a {
     text-decoration: none;
     color: #EC3548;
 }
+a.outline {
+    display: block;
+    position: relative;
+    margin: 32px auto;
+    text-decoration: none;
+    color: #1F1F2C;
+    border: solid 1px #1F1F2C;
+    text-align: center;
+    padding: 12px 48px;
+    max-width: 200px;
+    border-radius: 2px;
+}
+a.outline:hover {
+    transition: 0.2s;
+    background: #1F1F2C;
+    color: #ffffff;
+    opacity: 1;
+}
+
 a:hover {
     transition: 0.3s;
     opacity: 0.7;
@@ -215,6 +234,8 @@ header .container,
     padding-top: 0;
 }
 
+
+
 /* Grid ---------------------------- */
 .column,
 .columns {
@@ -367,7 +388,7 @@ span.hero-text {
     opacity: 0.5;
 }
 
-#aboutme {
+#contact {
     text-align: center;
     background: #F9F9FB;
     height: auto;
