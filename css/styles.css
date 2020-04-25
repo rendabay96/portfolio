@@ -42,8 +42,11 @@ a.outline {
     color: #1F1F2C;
     border: solid 1px #1F1F2C;
     text-align: center;
-    padding: 12px 48px;
+    padding: 6px 48px;
+    vertical-align: middle;
     max-width: 200px;
+    height: 48px;
+    box-sizing: border-box;
     border-radius: 2px;
 }
 a.outline:hover {
