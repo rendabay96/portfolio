@@ -1,7 +1,7 @@
 body {
     font-family: "Muli", sans-serif;
     font-size: 16px;
-    line-height: 32px;
+    line-height: 30px;
     font-weight: normal;
     margin: 0;
     color: #1F1F2C;
@@ -19,7 +19,7 @@ h3 {
     line-height: 1.4em;
 }
 h4 {
-    font-size: 1em;
+    font-size: 14px;
     text-transform: uppercase;
     font-weight: lighter;
     margin: 0;
@@ -69,6 +69,10 @@ a:hover {
     font-size: 13px;
 }
 
+.center-align {
+    text-align: center;
+}
+
 /* Navbar -------------------------- */
 
 .navbar {
@@ -96,6 +100,7 @@ a:hover {
 }
 .navright ul {
     margin: 3px 0;
+    padding-left: 0px;
 }
 .navright ul > li {
     list-style-type: none;
@@ -109,7 +114,8 @@ a:hover {
 }
 
 .navright ul > li > a:hover,
-.navbarLight .navright ul > li > a:hover {
+.navbarLight .navright ul > li > a:hover,
+.navbarGray .navright ul > li > a:hover {
     color: #EC3548;
     transition: 0.3s;
 }
@@ -120,7 +126,9 @@ a:hover {
     transition: 0.3s;
 }
 
-.navbarDark {
+.navbarDark,
+.navbarGray,
+.navbarLight {
   top: 0;
     position: fixed;
     width: 100%;
@@ -133,30 +141,25 @@ a:hover {
     color: #fff;
     z-index: 200;
 }
-
-.navbarLight {
-    width: 100%;
-    height: 60px;
-    background-color: rgba(255,255,255,1);
-    text-align: center;
-    margin: 0 auto;
-    padding: 10px 0px;
-    box-sizing: border-box;
+.navbarGray {
+    background-color: #F9F9FB;
     color: #1F1F2C;
-    z-index: 200;
-}
-.navbarLight {
-    top: 0;
-    position: fixed;
 }
 
-.navbarLight .navright ul > li > a {
+.navbarLight {
+    background-color: rgba(255,255,255,1);
+    color: #1F1F2C;
+}
+
+.navbarLight .navright ul > li > a,
+.navbarGray .navright ul > li > a  {
     text-decoration: none;
     color: rgb(31,31,47);
     margin-left: 24px;
 }
 
-.navbarDark .navIconLight {
+.navbarDark .navIconLight,
+.navbarGray .navIconDark {
     display: none;
 }
 
@@ -225,13 +228,15 @@ a:hover {
     position: relative;
     display: block;
     box-sizing: border-box;
-    padding: 80px 0;
+    padding: 72px 0;
     background: transparent;
     max-width: 1120px;
     margin: 0 auto;
     width: 100%;
     height: auto;
 }
+
+
 header .container,
 .project-header .container {
     padding-top: 0;
@@ -299,6 +304,14 @@ img {
     width: 120px;
     height: auto;
     margin: 0 auto;
+}
+
+.inline-image-list {
+    display: flex;
+    margin: 24px 0 0 0px;
+}
+.inline-image-list p {
+    margin: 5px 0 4px 16px;
 }
 
 
@@ -399,6 +412,25 @@ span.hero-text {
 }
 
 /* Case Studies -------------------------*/
+.project-hero2 {
+    height: 70vh;
+    width: 100%;
+    margin-top: 60px;
+}
+.project-hero2.hero-insights {
+    background: url(../images/insights/hero-insights.png) center no-repeat;
+    background-size: cover;
+    background-color: #F9F9FB;
+}
+
+#white-divider {
+    height: 1px;
+    background: #ffffff;
+    position: relative;
+    width: 80px;
+    margin: -12px auto;
+}
+
 .project-header {
     position: relative;
     height: auto;
@@ -416,9 +448,10 @@ span.hero-text {
 span.project-hero-text {
     color: #ffffff;
 }
-.project-hero h1 {
+.project-hero h1,
+.projects3 h1 {
     color: #fff;
-    margin: 18px 0 48px 0;
+    /*margin: 18px 0 48px 0;*/
     font-weight: bold;
     width: 100%;
     line-height: normal;
@@ -470,11 +503,11 @@ span.project-hero-text {
 .projects1 img,
 .projects1 video,
 .projects2 img,
-.projects2 video
+.projects2 video,
 .projects3 img,
 .projects3 video {
     width: 90%;
-    margin: 56px auto;
+    margin: 40px auto;
     display: block;
 }
 .quotes,.pullout-quotes {
@@ -544,6 +577,10 @@ ol.default-bullets {
 ul.default-bullets > li,
 ol.default-bullets > li {
     margin-bottom: 12px;
+}
+
+ul.image-bullets {
+    list-style-image: url(../images/insights/problem1.svg);
 }
 
 /* For devices larger than 550px */
@@ -642,7 +679,14 @@ ol.default-bullets > li {
     .projects .container {
         padding: 0px 40px;
     }
- 
+    .project-hero2 {
+        height: 500px;
+      }
+    .project-hero2.hero-insights {
+        background: url(../images/insights/hero-insights-mobile.png) center no-repeat;
+        background-size: contain;
+        background-color: #F9F9FB;
+    }
     .navbar,
     .footer {
         width: 82%;
