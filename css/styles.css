@@ -422,6 +422,16 @@ span.hero-text {
     background-size: cover;
     background-color: #F9F9FB;
 }
+.project-hero2.hero-mapmeta {
+    background: url(../images/mapmeta/hero-mapmeta.png) center no-repeat;
+    background-size: cover;
+    background-color: #F9F9FB;
+}
+.project-hero2.hero-chameleon {
+    background: url(../images/chameleon/hero-chameleon.png) center no-repeat;
+    background-size: cover;
+    background-color: #F9F9FB;
+}
 
 #white-divider {
     height: 1px;
@@ -684,6 +694,16 @@ ul.image-bullets {
       }
     .project-hero2.hero-insights {
         background: url(../images/insights/hero-insights-mobile.png) center no-repeat;
+        background-size: contain;
+        background-color: #F9F9FB;
+    }
+    .project-hero2.hero-mapmeta {
+        background: url(../images/mapmeta/hero-mapmeta-mobile.png) center no-repeat;
+        background-size: contain;
+        background-color: #F9F9FB;
+    }
+    .project-hero2.hero-chameleon {
+        background: url(../images/chameleon/hero-chameleon-mobile.png) center no-repeat;
         background-size: contain;
         background-color: #F9F9FB;
     }
