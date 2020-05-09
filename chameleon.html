@@ -12,21 +12,35 @@
     
 </head>
 <body>
-    <!-- Nav Bar-->
-    <div class="navbarGray">
+     <!-- Nav Bar-->
+     <div class="navbarTransp2">
         <div class="navbar">
             <div class="navleft">
                 <a href="index.html">
-                    <img class="navIconDark" src="images/fff-logo-new.svg">
+                    <img class="navIconDark" src="images/000-logo-new.svg">
                     <img class="navIconLight" src="images/000-logo-new.svg">
                 </a>
             </div>
             <div class="navright">
-                <ul>
-                    <li><a href="index.html#BH_work">Work</a></li>
-                    <li><a href="pdfs/BrendaHu-Resume-2020.pdf#zoom=60" target="_blank">Resume</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                </ul>
+                <a href="index.html#BH_work">Work</a>
+                <a href="pdfs/BrendaHu-Resume-2020.pdf#zoom=60" target="_blank">Resume</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </div>
+    <div class="navbarTransp">
+        <div class="navbar">
+            <div class="navleft">
+                <a href="index.html">
+                    <img class="navIconDark" src="images/000-logo-new.svg">
+                    <img class="navIconLight" src="images/000-logo-new.svg">
+                </a>
+            </div>
+            <div class="navright">
+                <a href="index.html#BH_work">Work</a>
+                <a href="pdfs/BrendaHu-Resume-2020.pdf#zoom=60" target="_blank">Resume</a>
+                <a href="index.html#contact">Contact</a>
+                
             </div>
         </div>
     </div>
@@ -37,31 +51,27 @@
         <div class="container">
             <div class="center-align">
                 <h1>Chameleon - Multivariate Testing</h1>
-                At the data science company where I work, our internal ad configuration and multivariate testing tool (called Chameleon) needed a major redesign for our teams to work more scalably as more partners opted into our technology. Not only had technical debt build-up led to diminishing returns when it came to developing new features, our key users were constantly battling inefficiencies while using the tool. As lead designer I owned research and design, working closely with engineers to modernize our multivariate testing tool and processes.
+                At the data science company where I work, our internal ad configuration and multivariate testing tool (called Chameleon) needed a major redesign for our teams to work more scalably as more partners opted into our technology. As lead designer I owned research and design, working closely with engineers to modernize our multivariate testing tool and processes.
             </div>
-        </div>
 
-        <div id="white-divider"></div>
+            <div id="white-divider"></div>
 
-        <div class="container">
-            <div class="center-align">
-            <div class="four columns">
-                <h4>My Role</h4><p style="color: #ffffff; margin: 8px 0 24px 0;">UX Design + Research</p>
-            </div>
-            <div class="four columns">
-                <h4>Context</h4><p style="color: #ffffff; margin: 8px 0 24px 0;">Created for:<br>Intent Global</p>
-            </div>
-            <div class="four columns">
-                <h4>Project Type</h4><p style="color: #ffffff; margin: 8px 0 24px 0;">Internal Tool UX/UI</p>
-            </div>
-            <div style="clear:both;"></div>
+            <div class="project-summary-grid">
+                    <div class="project-summary-item">
+                        <h4>My Role</h4><p>UX Design<br>Research</p>
+                    </div>
+                    <div class="project-summary-item">
+                        <h4>Created for</h4><p>Intent Global</p>
+                    </div>
+                    <div class="project-summary-item">
+                        <h4>Project Type</h4><p>UX Design</p>
+                    </div>
             </div>
         </div>
     </div>
-    </div>
+
 <div class="projects1">
     <div class="container">
-        <h4>Getting Started</h4> 
         <h3>User Research</h3>
         To kick off discovery for this long-awaited redesign, I interviewed 12 primary users of Chameleon. This included partner integration engineers, PMs, front-end dev teams, and optimization managers - each with their own level of expertise in launching and monitoring multivariate tests (as well as navigating the tool’s shortcomings). 
         <p>
@@ -74,7 +84,8 @@
         Two of the main insights we synthesized to guide our feature recommendations were:
         <ol class="default-bullets"> 
             <li>The Search functionality has to be more robust to return results that users actually care about.</li>
-            <li>To reduce errors caused by redundancy and lack of UI feedback, we should address UX improvements around configuration creation.</li>
+            <li>To reduce errors caused by lack of UI feedback, we should address UX improvements around configuration creation.</li>
+        </ol>
     </div>
 
 </div>
@@ -82,21 +93,19 @@
 <div class="projects3">
     <div class="container">
         <h3>The Objective</h3>
-        From a product strategy perspective, we needed to redesign Chameleon so that we can achieve two main objectives: 1) rewrite the front-end with a modern technology our engineers can own moving forward and 2) improve the UX for our key users and reduce inefficiencies in their test launching workflows. 
-        <p>To achieve our objective we begin by addressing the more pressing user needs and focus on redesigning the Search functionality as well as Configuration Creation.
+        From a product strategy perspective, we needed to redesign Chameleon to improve the UX for our key users and reduce inefficiencies in their test launching workflows, which would enable both users and the tool itself to handle the increasing volume of multivariate tests that we run for our partners. To achieve this we begin by addressing the more pressing user needs and focus on redesigning the Search functionality as well as Configuration Creation.
     </div>
 </div>
 
 <div class="projects1">
     <div class="container">
-        <h4>DESIGNING THE EXPERIENCE</h4> 
-        <h3>User Flow</h3>
+        <h3>Designing The Experience</h3>
         Redesigning Chameleon inevitably involved rebuilding a lot of the functionality that exists today, so to get buy-in from our stakeholders (the team leads and PM) I mapped out the primary user flows along with feature recommendations informed by our user insights above. We used Figma to share the recommendations in the context of the user flow so that the engineers can begin prioritizing.
         <img src="images/chameleon/figma-userflow.png">
         <p class="image-captions">Complete user flow + feature update recommendations.</p>
         <br>
         <img src="images/chameleon/chameleon-flow.png">
-        <p class="image-captions">The main user flow we will be solving for our MVP.</p>
+        <p class="image-captions">The primary user flow we will be solving for our MVP.</p>
         <!--<br>
         <img src="images/chameleon/chameleon-wireframes.png">
         <p class="image-captions">Wireframes created on Figma, where the engineer and I can collaborate.</p>-->
@@ -106,44 +115,45 @@
 </div>
 
 <div class="projects2">
-    <div class="container">
-        <h4>USER FLOW #1</h4>
-        <h3>Search Configuration</h3>
+    <div class="container" style="padding-bottom: 0;">
+        <h3>User Flow 1: Search Configuration</h3>
        	Our user research showed that the existing search results page had many shortcomings that slowed our users down when they were searching for specific configurations. 
 
     </div>
 
 </div>
 
-<div class="splitscreen2">
-    <div class="six columns">
+<div class="splitscreen2" style="padding-bottom: 0;">
+    <div class="split-left">
         <img style="border: 1px solid rgba(0,0,0,0.1)" src="images/chameleon/chameleon1-search-ss.png">
-        <br>
-        <br>
-        <p class="image-captions">Original Search page</p>
     </div>
-    <div class="six columns">
-        <h3>User Frustrations:</h3>
-       <ol class="default-bullets">
-            <li><b>Filters:</b> 100% of users expressed the need for more filters. Majority were frustrated with filters lacking text matches at a more granular level. </li>
-            <li><b>List results:</b> Excessive white space limited the number of results in view at a time, especially when expanding cards for context.</li>
-            <li><b>Sorting:</b> Most users desired additional sort features. The learning curve for certain sort metrics also created dependencies.</li>
+     <div class="split-right blurb">
+        <h3>Original Search Page</h3>
+        <p>
+        Frequently mentioned user paint points around the Search functionality were as follows: 
+        <ol class="default-bullets">
+            <li>100% of users expressed the need for more filters. Majority were frustrated with their lack of text matches at a more granular level.</li>
+            <li>There's a limited number of results in view at a time, especially when expanding cards for context.</li>
+            <li>Majority of users need additional sort features. The learning curve for certain sort metrics also created dependencies.</li>
         </ol>
     </div>
 </div>
+
+
 <div class="splitscreen2">
-    <div class="six columns">
+    <div class="split-left">
         <img style="border: 1px solid rgba(0,0,0,0.1)" src="images/chameleon/chameleon2-search-mock.png">
         <br>
         <br>
         <p class="image-captions">Redesigned Search page</p>
     </div>
-    <div class="six columns">
+    <div class="split-right blurb">
         <h3>Final Design For Search</h3>
+        A few iterations and user testing sessions later, our solution for the filters, list results, and sorting were implemented:
        <ol class="default-bullets">
-            <li><b>Filters:</b> We added exclusions, ability to search within JSON strings, and ability to add filters.</li>
-            <li><b>List results:</b> A table format with row items makes scanning for information much easier; more configurations (expanded or not) are within view.</li>
-            <li><b>Sorting:</b> We created additional helpful sort-by features and tooltips on hover for context.</li>
+            <li>Exclusions, ability to search within JSON strings, and ability to add filters sped up filtering.</li>
+            <li>A table format makes scanning for information much easier; more configurations are within view.</li>
+            <li>Additional helpful sort-by features and tooltips on hover for context were added.</li>
         </ol>
     </div>
 </div>
@@ -151,7 +161,7 @@
 <div class="projects1">
     <div class="container">
         <h3>Building + Testing</h3>
-        To build our MVP our engineer and I used the Vuetify framework with ready-made Material Design components. Soon we were able to ship a functioning Search MVP for Chameleon 2.0 and test for initial user feedback. 
+        To build our MVP our engineer and I used the Vuetify framework with ready-made Material Design components. Soon we were able to ship a functioning Search MVP for Chameleon 2.0 and test for more user feedback. 
         <img style="border: 1px solid rgba(0,0,0,0.1)" src="images/chameleon/chameleon2-search.gif">
         <p class="image-captions">Chameleon 2.0 - Search </p>
         <br>
@@ -173,14 +183,13 @@
 
 <div class="projects2">
     <div class="container">
-        <h4>USER FLOW #2 (Preview)</h4>
-        <h3>Create New Configuration</h3>
-        As mentioned, our objective was also to reduce errors caused by redundancy and lack of UI feedback. One of the major UX improvements around configuration creation we wanted to focus on was  that of assigning variants (to run multivariate tests). What’s unique about this tool is that it is not simply an A/B testing tool we’re building. Often we test 3+ variants for our partners, so theoretically, the UI must accommodate any number of variants.
+        <h3>User Flow 2 (preview): Create New Configuration</h3>
+        The main insight from user research informing the solution for this portion of the tool was that we need to reduce human error and inefficiencies caused by lack of UI feedback. One major UX improvement around configuration creation we wanted to focus on was that of assigning variants. This is not simply an A/B testing tool we’re building. Often we test 3+ variants for our partners, so theoretically, the UI must accommodate any number of variants.
 
     </div>
 </div>
-<div class="splitscreen2" style="background:#ffffff;">
-    <div class="six columns">
+<div class="splitscreen1" style="align-items: flex-start;">
+    <div class="split-left">
         <h3>Original Variants Page</h3>
         Here's an example of how overwhelming the current flow for setting up test variants can be. After a series of steps, the user reviews a huge matrix (requiring scrolling in both directions) just to select 4 specific variants she wants to activate for the test.
         <br>
@@ -188,7 +197,7 @@
        <img style="border: 1px solid rgba(0,0,0,0.1)" src="images/chameleon/chameleon1-variants.png">
        <p class="image-captions" style="margin: 24px 0 60px 0;">Original Variants Page</p>
     </div>
-    <div class="six columns">
+    <div class="split-right">
         <h3>Redesigned Variants Page</h3>
         We reimagined a possible flow that would reduce cognitive load. Despite essentially reversing the original process in this new UI, majority of our users have praised its intuitivenss and the removal of unnecessary steps to achieving their user goal.
        <br>
@@ -201,8 +210,7 @@
 
 <div class="projects3">
     <div class="container">
-        <h4>NEXT STEPS</h4> 
-        <h3>Building Out The Rest</h3>
+        <h3>Next Steps</h3>
         We’re in the midst of iterating on several new user flows to reach our objective in simplifying the overall process of setting up a multivariate test. So far, the user feedback for <b>Use Flow #1: Search</b> has been a combination of positive as well as requests for even more capabilities now that the users have had time to experiement and get a sense of its potential! 
         <p>On <b>User Flow #2: Create Configurations</b>- we'll continue to test the prototype and iterate as necessary. In general we're proud of the progress we've made thus far, and I’m looking forward to analyzing more feedback so we can build out and iterate on the rest of the feature recommendations.
 
@@ -222,9 +230,9 @@
         <a href="https://dribbble.com/rendabay96" target="_blank"><img src="images/footer_fff_dribbble.png"></a>
         <a href="mailto:hbrendax4@gmail.com" target="_blank"><img src="images/footer_fff_mail.png"></a>
     </div>
-    <div style="clear:both;"></div>
+
 </div>
-    <div style="clear:both;"></div>
+
 </div>
     
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

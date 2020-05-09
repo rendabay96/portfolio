@@ -6,14 +6,14 @@ $(document).ready(function() {
 	});
     
     //navbar transition
-    var header = $(".navbarGray");
+    var header = $(".navbarTransp");
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
 
-        if (scroll >= 800) {
-            header.removeClass('navbarGray').addClass("navbarLight");
+        if (scroll >= 700) {
+            header.removeClass('navbarTransp').addClass("navbarLight");
         } else {
-            header.removeClass("navbarLight").addClass('navbarGray');
+            header.removeClass("navbarLight").addClass('navbarTransp');
         }
     });
     

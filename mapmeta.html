@@ -13,24 +13,37 @@
 </head>
 <body>
     <!-- Nav Bar-->
-    <div class="navbarGray">
+     <div class="navbarTransp2">
         <div class="navbar">
             <div class="navleft">
                 <a href="index.html">
-                    <img class="navIconDark" src="images/fff-logo-new.svg">
+                    <img class="navIconDark" src="images/000-logo-new.svg">
                     <img class="navIconLight" src="images/000-logo-new.svg">
                 </a>
             </div>
             <div class="navright">
-                <ul>
-                    <li><a href="index.html#BH_work">Work</a></li>
-                    <li><a href="pdfs/BrendaHu-Resume-2020.pdf#zoom=60" target="_blank">Resume</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                </ul>
+                <a href="index.html#BH_work">Work</a>
+                <a href="pdfs/BrendaHu-Resume-2020.pdf#zoom=60" target="_blank">Resume</a>
+                <a href="index.html#contact">Contact</a>
             </div>
         </div>
     </div>
-    
+    <div class="navbarTransp">
+        <div class="navbar">
+            <div class="navleft">
+                <a href="index.html">
+                    <img class="navIconDark" src="images/000-logo-new.svg">
+                    <img class="navIconLight" src="images/000-logo-new.svg">
+                </a>
+            </div>
+            <div class="navright">
+                <a href="index.html#BH_work">Work</a>
+                <a href="pdfs/BrendaHu-Resume-2020.pdf#zoom=60" target="_blank">Resume</a>
+                <a href="index.html#contact">Contact</a>
+                
+            </div>
+        </div>
+    </div>
     <div class="project-hero2 hero-mapmeta"></div>
     <div class="projects3">
         <div class="container">
@@ -38,48 +51,61 @@
                 <h1>Mobile Map Meta</h1>
                 As part of the mobile UX initiative at the ad tech + data science company where I work, we solved for increasing bookings on mobile devices within the online travel industry, where conversion rates continue to be much lower than that of desktop. We chose a map interface to provide users with the optimal hotel comparison shopping experience.
             </div>
-        </div>
+            <div id="white-divider"></div>
 
-        <div id="white-divider"></div>
-
-        <div class="container">
-            <div class="center-align">
-            <div class="four columns">
-                <h4>My Role</h4><p style="color: #ffffff; margin: 8px 0 24px 0;">UX Design + Research</p>
-            </div>
-            <div class="four columns">
-                <h4>Context</h4><p style="color: #ffffff; margin: 8px 0 24px 0;">Created for:<br>Intent Global</p>
-            </div>
-            <div class="four columns">
-                <h4>Project Type</h4><p style="color: #ffffff; margin: 8px 0 24px 0;">Mobile UX/UI</p>
-            </div>
-            <div style="clear:both;"></div>
+            <div class="project-summary-grid">
+                <div class="project-summary-item">
+                    <h4>My Role</h4><p>UX Design<br>Research</p>
+                </div>
+                <div class="project-summary-item">
+                    <h4>Created for</h4><p>Intent Global</p>
+                </div>
+                <div class="project-summary-item">
+                    <h4>Project Type</h4><p>Mobile UX</p>
+                </div>
             </div>
         </div>
     </div>
-    </div>
+   
+
 <div class="projects1">
     <div class="container">
-        <h4>Getting Started</h4> 
         <h3>User Research - Booking Hotels</h3>
         We interviewed 25 users about their typical travel booking process and learned that most of them do some sort of comparison shopping. We also found out their top 3 priorities while researching hotels:
-        <ul class="checklist">
-            <li class="checkmark"><p>65% of users mentioned location</p></li>
-            <li class="checkmark"><p>30% of users mentioned price</p></li>
-            <li class="checkmark"><p>17% of users mentioned aesthetic (photos)</p></li>
-        </ul>
-        Next, we found out what their top frustration was while booking hotels (or travel in general) on mobile, and the overwhelming majority said:
-    <div class="quotes">
-        <ul>
-            <li>"The screen size is too small for comparing prices and options."</li>
-        </ul>
-    </div>
-     This research helped us zone in on the objective of this project during our ideation session, which included the designers, engineers, and product manager.
+        <table>
+        <thead>
+            <tr>
+                <th>Priorities</th>
+                <th>% of Respondents</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Location of the hotel</td>
+                <td>65</td>
+            </tr>
+            <tr>
+                <td>Price per night</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Aesthetics (photos)</td>
+                <td>17</td>
+            </tr>
+            
+        </tbody>
+        
+    </table>
+
+
+
+
+        Next, we found out what their top frustration was while booking hotels (or travel in general) on mobile, and the overwhelming majority said: <b>"The screen size is too small for comparing prices and options."</b> This research helped us zone in on the objective of this project during our ideation session, which included the designers, engineers, and product manager.
        
 </div>
 </div>
 
-<div class="projects2">
+<div class="projects3">
     <div class="container">
         <h3>The Objective</h3>
        	Some of our users face analysis paralysis from comparing too many options during their hotel search, and this is even more frustrating on a small screen. With the help of our network-wide data, we hypothesized that users are less interested in comparing multiple hotel sites and instead want to be guided directly to the right hotel that meets their preferences. 
@@ -91,47 +117,42 @@
 
 <div class="projects1">
     <div class="container">
-        <h4>Designing the Experience</h4>
         <h3>Ideation + Wireframes</h3>
-        The main output for our ideation session was defining the MVP. In order to test early and practice rapid iterative design, we scoped this project to the top 10 most-searched cities for V1. Given that according to our user research, the top priority for choosing a hotel was location, we decided to create a mobile meta search site with a map interface and nick-named it Map Meta.
+        The main output for our ideation session was defining the MVP. In order to test early, we scoped this project to the top 10 most-searched cities for V1. Given that according to our user research, the top priority for choosing a hotel was location, we decided to create a mobile meta search site with a map interface and nick-named it <b>Map Meta</b>.
 
-        
+        <img src="images/mapmeta/map - wireframes.png">
     </div>
 </div>
-<div class="container" style="padding-top:0;">
-    <img src="images/mapmeta/map - wireframes.png">
-</div>
+
 <div class="projects1">
-    <div class="container">
+    <div class="container" style="padding-top: 0px;">
         <h3>Rapid Iterative Design</h3>
         In true Lean UX fashion we tested often and applied rapid iterative design. We invited users nearly every day to usability test our <a href="https://invis.io/9SNQ1IPMBFT#/278358251_B1_Best_Value_Hotel2" target="_blank">prototype</a>. A few iterations later, our Map Meta site was ready to be released for live split testing on several of our partner sites. 
         
     </div>
 </div>
 
-<div class="projects">
-<div class="container" style="padding: 0 40px;">
-    <div class="four columns">
+
+<div class="project-grid" style="padding-bottom: 120px;">
+     <div class="project-grid-item">
         <img src="images/mapmeta/map - mock 1.png">
-        <h5>Version 1:</h5><p style="margin-bottom: 60px;">Map pins weren't intuitive. Users did not interact with the filters.</p>
+        <h5>Version 1:</h5>Map pins weren't intuitive. Users did not interact with the filters.
 
     </div>
-    <div class="four columns">
+     <div class="project-grid-item">
         <img src="images/mapmeta/map - mock 2.png">
-        <h5>Version 2:</h5><p style="margin-bottom: 60px;">Improved interaction, but cards took up too much vertical space.</p>
+        <h5>Version 2:</h5>Improved interaction, but cards took up too much vertical space.
     </div>
-    <div class="four columns">
+     <div class="project-grid-item">
         <img src="images/mapmeta/map - mock 3.png">
-        <h5>Version 3:</h5><p style="margin-bottom: 60px;">Redesigned cards to include the optimal amount of information.</p>
+        <h5>Version 3:</h5>Redesigned cards to include the optimal amount of information.
     </div>
-    <div style="clear:both;"></div>
 </div>
 
 </div>
 
-<div class="projects1">
+<div class="projects2">
     <div class="container">
-        <h4>The Result</h4> 
         <h3>Map Meta - Now Live</h3>
         This Map Meta ad unit is currently live on select hotel and vacation rental sites. The map presents itself whenever our predictive analytics categorizes a site visitor as unlikely to book in the current browsing session, thus capturing otherwise bouncing traffic by advertising alternative hotel options offered by other travel sites in our network. Thus, not only are we providing a utility for mobile site users looking to book the right hotel, we're adhering to the business goal of driving more mobile traffic and conversions to our partners.
         <img style="width: 300px;" src="images/mapmeta/map-meta-demo.gif">
@@ -161,9 +182,9 @@
         <a href="https://dribbble.com/rendabay96" target="_blank"><img src="images/footer_fff_dribbble.png"></a>
         <a href="mailto:hbrendax4@gmail.com" target="_blank"><img src="images/footer_fff_mail.png"></a>
     </div>
-    <div style="clear:both;"></div>
+
 </div>
-    <div style="clear:both;"></div>
+
 </div>
     
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
