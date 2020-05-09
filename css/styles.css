@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root {
     --primary-bg-color: #1f1f2f;
     --secondary-bg-color: #EEABA0;  
@@ -98,12 +101,6 @@ body {
     margin: 0;
     color: var(--primary-font-color);
 }
-
-
-
-/* Font styles ------------------ */
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 h1 {
     font-size: 48px;
