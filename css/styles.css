@@ -103,7 +103,7 @@ body {
 
 /* Font styles ------------------ */
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 h1 {
     font-size: 48px;
@@ -182,8 +182,8 @@ a:hover {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    width: 80%;
-    max-width: 1120px;
+    width: 90%;
+    max-width: 1400px;
     margin: auto;
     flex-wrap: wrap;
     align-items: center;
@@ -266,8 +266,8 @@ a:hover {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    width: 80%;
-    max-width: 1120px;
+    width: 90%;
+    max-width: 1400px;
     margin: 0 auto;
     flex-wrap: wrap;
     align-items: center;
@@ -519,7 +519,6 @@ header{
     text-align: center;
     background: var(--tertiary-bg-color);
     height: auto;
-    padding: 40px 0;
 }
 
 
