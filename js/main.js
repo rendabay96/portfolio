@@ -10,7 +10,7 @@ $(document).ready(function() {
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
 
-        if (scroll >= 800) {
+        if (scroll >= 440) {
             header.removeClass('navbarDark').addClass("navbarLight");
         } else {
             header.removeClass("navbarLight").addClass('navbarDark');
@@ -29,3 +29,7 @@ $(document).ready(function() {
 
   ga('create', 'UA-91000029-1', 'auto');
   ga('send', 'pageview');
+
+
+
+  

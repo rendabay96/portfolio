@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Brenda Hu - UX/UI Design</title>
+    <title>Brenda Hu - UX Design</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="image" property="og:image" content="images/home/hero_photo3.png">
+    <meta name="description" property="og:description" content="Hi I'm Brenda, a UX Designer based in New York. Check out my portfolio!">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="images/black2_logo-new.png">
-
 
     
 </head>
 <body>
-   <!-- Nav Bar-->
+<!-- Nav Bar-->
      <div class="navbarTransp2">
         <div class="navbar">
             <div class="navleft">
@@ -44,52 +46,28 @@
         </div>
     </div>
     
-    <div class="project-hero2 hero-voyat-landing"></div>
-    <div class="projects3">
-        <div class="container">
-            <div class="center-align">
-                <h1>Voyat Home</h1>
-                At Voyat, an ecommerce optimization platform for hoteliers, we as the design team were involved with the iterative process of discovering the brand of the company. Given that Voyat partnered primarily with luxury hotel brands, it was only appropriate for our own website to embody the same style. Provided with a new brand guideline from our marketing team, we revamped Voyat’s homepage with a modern makeover.
-            </div>
-            <div id="white-divider"></div>
 
-            <div class="project-summary-grid">
-                <div class="project-summary-item">
-                    <h4>My Role</h4><p>UX Design,<br>Illustration</p>
-                </div>
-                <div class="project-summary-item">
-                    <h4>Created for</h4><p>Voyat</p>
-                </div>
-                <div class="project-summary-item">
-                    <h4>Project Type</h4><p>Landing Design</p>
-                </div>
+    <div class="aboutme">
+        <div class="splitscreen1" style="padding: 0;">
+            <div class="split-left" style="text-align: center;">
+                <img src="images/home/hero_photo3.png">
+            </div>
+            <div class="split-right blurb">
+                <h3>Hi, I'm Brenda.</h3>
+               My design journey began with my experience developing new workflow processes for a growing team at a previous role. There, I discovered that the most gratifying parts of my job were designing and testing the tools I created to streamline team efficiency. I continue to enjoy translating complex ideas into solutions that are not only user-friendly, but empowering. Today I’m a UX Designer at Intent, based in New York.
+               <p><b>I'm currently seeking new opportunities!</b>
+                <p>Want to collaborate? Find me on <a href="https://www.linkedin.com/in/brenda-hu/" target="_blank">LinkedIn</a> or get in touch below.
+            <a class="button filled" href="mailto:hbrendax4@gmail.com" target="_blank">Send A Message</a>
             </div>
         </div>
     </div>
+
+
+
+
+
     
-    
-<div class="projects2">
-    <div class="container">
-    <img style="box-shadow: 0px 2px 4px rgba(0,0,0,0.20);" src="images/voyat-website/voyat-landing-page.png">
-    </div>
-</div>
-    
-<div class="splitscreen2">
-    <div class="split-left">
-        <img src="images/voyat-website/voyat-hero.png">
-    </div>
-    <div class="split-right blurb">
-        <h3>Creating The Look</h3>
-        <p>
-        Originally, Voyat's homepage emphasized ease of implementation and predictive analytics, highlighting the technology behind the product. However, as the business focused more on providing better UX to our hoteliers' end users and delivering beautifully designed dynamic messaging that fit their brand, we felt that Voyat's own website needed a new look that appealed to the high-end, boutique/luxury clients we partnered with. 
-        
-    </div>
-</div>
-
-
-
-
-<div class="footerGray">
+<div class="footerTransp">
 <div class="footer">
     <div class="footerleft">
         <p>&copy; 2020 Brenda Hu</p>
@@ -100,7 +78,6 @@
         <a href="https://dribbble.com/rendabay96" target="_blank"><img src="images/footer_dribbble.png"></a>
         <a href="mailto:hbrendax4@gmail.com" target="_blank"><img src="images/footer_mail.png"></a>
     </div>
-
 </div>
 
 </div>
@@ -108,7 +85,14 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/smooth-scroll.js"></script>
-<script src="js/main2.js"></script>
+<script src="js/main.js"></script>
+<script>
+     let path = document.querySelector(".star");
+ let length = path.getTotalLength();
+ // console.log(length);
 
+ path.style.strokeDasharray = length + ' ' + length;
+ path.style.strokeDashoffset = length;
+</script>
 
 </body>
