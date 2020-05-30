@@ -482,6 +482,8 @@ header{
 .hero svg {
     position: absolute;
     margin: 36px auto 0 auto;
+    width: 90%;
+    max-width: 720px;
 }
 
 .text-highlight {
@@ -678,7 +680,8 @@ header{
 .projects1 table,
 .projects2 table {
     text-align: left;
-    width: 480px;
+    width: 100%;
+    max-width: 480px;
     margin: 56px auto;
     line-height: 18px;
     font-size: 0.9em;
