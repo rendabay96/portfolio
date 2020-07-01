@@ -83,9 +83,9 @@
 <div class="projects2">
     <div class="container">
         <h3>User Research</h3>
-        To kick off discovery for this long-awaited redesign, I interviewed 12 primary users of Chameleon. This included partner integration engineers, PMs, front-end dev teams, and optimization managers - each with their own level of expertise in launching and monitoring multivariate tests (as well as navigating the tool’s shortcomings). 
+        To kick off discovery for this long-awaited redesign, I interviewed 12 key users of Chameleon: partner integration engineers, PMs, dev teams, and optimization managers - each with their own level of expertise in launching and monitoring multivariate tests (as well as navigating the tool’s shortcomings). In general their test-launching process is as follows: once a partner opts into our machine-learning platform, our internal teams launch split tests from Chameleon to help partners maximize ad revenue with catered end user experiences. 
         <p>
-            After learning their processes, shadowing their daily workflows, and documenting their frustrations, I imported all raw interview notes into a research repository and developed a qualitative data tagging system.
+            After learning their processes and shadowing their daily workflows, I imported all raw interview notes into a research repository and developed a qualitative data tagging system to spot trends.
 
 
     <img src="images/chameleon/dovetail - search - ss.png">
@@ -93,8 +93,8 @@
     <br>
         Two of the main insights we synthesized to guide our feature recommendations were:
         <ol class="default-bullets"> 
-            <li>The Search functionality has to be more robust to return results that users actually care about.</li>
-            <li>To reduce errors caused by lack of UI feedback, we should address UX improvements around configuration creation.</li>
+            <li>The Search functionality needed to be more robust to return results that users actually care about.</li>
+            <li>22% of user pain points had to do with the Create Configuration flow, particularly the inefficiencies around creating test variants.</li>
         </ol>
     </div>
 
@@ -102,22 +102,25 @@
 
 <div class="projects3">
     <div class="container">
-        <h3>The Objective</h3>
-        With the increasing volume of multivariate tests that we run for our partners, our internal teams struggled to work scalably due to Chameleon’s shortcomings when it came to their test-launching workflows, particularly around the Search feature as well as Configuration Creation. Our goal was to redesign Chameleon to help remove pain points and dependencies preventing our teams from efficiently launching and maintaining thousands of ongoing tests. 
+        <h3>The Problem</h3>
+        With the increasing volume of multivariate tests that we run for our partners, our internal teams struggled to work scalably due to Chameleon’s shortcomings when it came to their test-launching workflows, specifically around <b>Search</b> and <b>Create Configurtion</b>. 
+        <p>
+            Our goal was to redesign Chameleon to help remove pain points and dependencies preventing our teams from efficiently launching and maintaining thousands of ongoing, multivariate tests.
+ 
     </div>
 </div>
 
 <div class="projects1">
     <div class="container">
         <h3>Designing The Experience</h3>
-        Redesigning Chameleon inevitably involved rebuilding a lot of the functionality that exists today, so to get buy-in from our stakeholders (the team leads and PM) I mapped out the primary user flows along with feature recommendations informed by our user insights above. We used Figma to share the recommendations in the context of the user flow so that the engineers can begin prioritizing.
+        Redesigning Chameleon involved rebuilding a lot of the functionality that exists today, so to get buy-in from our stakeholders (i.e. the tech leads and PM) I mapped out the primary user flows along with feature recommendations informed by our user insights above. I used Figma to share the recommendations in the context of the user flow. By breaking this huge project up into smaller chunks, the team had an easier time managing priorities and timelines together.
+
         <img src="images/chameleon/figma-userflow.png">
         <p class="image-captions">Complete user flow + feature update recommendations.</p>
         <br>
         <img src="images/chameleon/chameleon-flow.png">
         <p class="image-captions">The primary user flow we will be solving for our MVP.</p>
-        <!--<br>
-        <img src="images/chameleon/chameleon-wireframes.png">
+        <!--<img src="images/chameleon/chameleon-wireframes.png">
         <p class="image-captions">Wireframes created on Figma, where the engineer and I can collaborate.</p>-->
 
 
@@ -127,7 +130,9 @@
 <div class="projects2">
     <div class="container" style="padding-bottom: 0;">
         <h3>User Flow 1: Search Configuration</h3>
-       	Our user research showed that the existing search results page had many shortcomings that slowed our users down when they were searching for specific configurations. 
+       	Our research showed that the search results page as it stands today slowed our users down when they were searching for specific configuration.
+        <br><br>
+            <b>Hypothesis:</b> If we update the filters and display list results in a table format, users will find their configurations faster because users need more granular matches and an easier way to grasp contextual information.
 
     </div>
 
@@ -140,11 +145,11 @@
      <div class="split-right blurb">
         <h3>Original Search Page</h3>
         <p>
-        Frequently mentioned user paint points around the Search functionality were as follows: 
+        From user interviews, we gathered requently mentioned user pain points around the Search functionality (n = 12):
         <ol class="default-bullets">
-            <li>100% of users expressed the need for more filters. Majority were frustrated with their lack of text matches at a more granular level.</li>
-            <li>There's a limited number of results in view at a time, especially when expanding cards for context.</li>
-            <li>Majority of users need additional sort features. The learning curve for certain sort metrics also created dependencies.</li>
+            <li>50% of users expressed the need for more sort or filters, many of whom were frustrated with the lack of text matches at a more granular level.</li>
+            <li>Difficulty “hunting down a config” was a common topic. For 33% of users, the learning curve for certain sort metrics also created dependencies.</li>
+            
         </ol>
     </div>
 </div>
@@ -159,11 +164,10 @@
     </div>
     <div class="split-right blurb">
         <h3>Redesigned Search Page</h3>
-        A few iterations and user testing sessions later, our solution for the filters, list results, and sorting were implemented:
+        A couple tests and iterations later, the feedback for our final design for Search is as follows (n = 4):
        <ol class="default-bullets">
-            <li>Exclusions, ability to search within JSON strings, and ability to add filters sped up filtering.</li>
-            <li>A table format makes scanning for information much easier; more configurations are within view.</li>
-            <li>Additional helpful sort-by features and tooltips on hover for context were added.</li>
+            <li>We added exclusions, text matches within strings, and ability to add filters. 100% of users found new default filters + the ability to add more as needed very helpful.</li>
+            <li>All users found the new table format easier for scanning for information. In addition, new sort-by features and tooltips on hover for context removed dependencies.</li>
         </ol>
     </div>
 </div>
@@ -176,53 +180,97 @@
         <p class="image-captions">Chameleon 2.0 - Search </p>
         <br>
         <br>
-        So far the new Search’s positive reception has been validating the new design. It's great to know that we’ve delivered a much more robust Search feature handling thousands of configurations serving custom treatments for our partners sites. These are some of the direct quotes from our key users on how they're adapting to the new Search design: 
-        
-        <div class="quotes">
-            <ul>
-                <li>“It’s definitely faster.”</li>
-                <br>
-                <li>It lived up to expectations “based on the mocks we saw.”</li>
-                <br>
-                <li>“This has been a pretty painless transition” so far.</li>
-            </ul>
-        </div>
-
+        So far the new Search’s positive reception has been validating the new design. One partner integration engineer says, “It’s definitely faster,” while another tells us that using the new beta product “has been a pretty painless transition” so far!
+        <p>While we await additional user feedback for User Flow #1: Search, now a much more robust feature handling thousands of configurations serving custom treatments for our partners sites, we move on to solving for the 2nd user flow we prioritized: <b>Create Configuration</b>.
     </div>
 </div>
 
 <div class="projects2">
     <div class="container">
-        <h3>User Flow 2 (preview): Create New Configuration</h3>
+        <h3>User Flow 2: Create Configuration</h3>
         The main insight from user research informing the solution for this portion of the tool was that we need to reduce human error and inefficiencies caused by lack of UI feedback. One major UX improvement around configuration creation we wanted to focus on was that of assigning variants. This is not simply an A/B testing tool we’re building. Often we test 3+ variants for our partners, so theoretically, the UI must accommodate any number of variants.
+        <p>To illustrate the user flow, suppose she is setting up the below 3-way test with the following configuration parameters:
+        <img src="images/chameleon/chameleon-ex-3-way.png">
+
 
     </div>
 </div>
-<div class="splitscreen1" style="align-items: flex-start;">
-    <div class="split-left">
-        <h3>Original Variants Page</h3>
-        Here's an example of how overwhelming the current flow for setting up test variants can be. After a series of steps, the user reviews a huge matrix (requiring scrolling in both directions) just to select 4 specific variants she wants to activate for the test.
-        <br>
-       <br>
-       <img style="border: 1px solid rgba(0,0,0,0.1)" src="images/chameleon/chameleon1-variants.png">
-       <p class="image-captions" style="margin: 24px 0 60px 0;">Original Variants Page</p>
-    </div>
-    <div class="split-right">
-        <h3>Redesigned Variants Page</h3>
-        We reimagined a possible flow that would reduce cognitive load. Despite essentially reversing the original process in this new UI, majority of our users have praised its intuitivenss and the removal of unnecessary steps to achieving their user goal.
-       <br>
-       <br>
-       <img style="border: 1px solid rgba(0,0,0,0.1)" src="images/chameleon/chameleon2-variants.gif">
-       <p class="image-captions" style="margin: 24px 0 60px 0;">Redesigned Variants Page - Prototype </p>
+<div class="projects1">
+    <div class="container" style="padding-bottom: 0px;">
+        <h3>Researching The Problem</h3>
+        The current flow for setting up the 3-way test variants is below. As observed during user research, there’s a ton of back-tracking and high cognitive load in the steps taken to reach the user goal: setting up test variants (indicated in black).
+  
+        <img src="images/chameleon/flow-config-original.png" style="width: 100%;">
+        <p class="image-captions">Original user flow for Create Configuration</p>
+        <br><br>
     </div>
 </div>
+<div class="splitscreen1">
+        <div class="split-left">
+            <img src="images/chameleon/chameleon1-variants-combined.png">
+        </div>
+        <div class="split-right blurb">
+            <h3>Original Create Configuration</h3>
+            <p>
+            Here is a consolidation of user pain points around creating test variants (n = 12):
+            <ol class="default-bullets">
+                <li>42% of users commented on the steep learning curve and high cognitive load in this unintuitive attribute-first approach.</li>
+                <li>66% disliked the amount of page leaves required for certain steps, e.g. adding new attributes/values and reviewing variants on the next page.</li>
+                <li>Once the matrix of all possible variants were generated, 83% were frustrated with the process of finalizing variants (“You have so many options and it’s really overwhelming.” -PM).</li>
+                
+            </ol>
+        </div>
+</div>
+<div class="projects1">
+    <div class="container">
+        <h3>The Solution: Create Configuration</h3>
+        Our proposed solution for the redesign reduces the number of steps and eliminates the need to leave the configuration page:
 
+        <br><br><b>Hypothesis:</b> If we switch the user flow to a “variants-first” approach with sufficient UI feedback, then users are able to achieve the user goal of setting up test variants in an intuitive way because we help reduce the cognitive load as well as redundancies experienced today.
+  
+        <img src="images/chameleon/flow-config-solution.png" style="width: 100%;">
+        <p class="image-captions">Redesigned user flow for Create Configuration: We reduce the number of steps and cognitive load by <b>leading with</b> test variant set-up (indicated in black) and achieving the user goal through subsequent steps in an intuitive way.
+    </div>
+</div>
+<div class="splitscreen1">
+        <div class="split-left">
+            <img src="images/chameleon/chameleon2-variants-v1.png">
+        </div>
+        <div class="split-right blurb">
+            <h3>Prototype V1: Create Configuration</h3>
+            <p>
+            We led a usability test with n = 4 users and received feedback around a reimagined flow for test variants:
+            <ol class="default-bullets">
+                <li>Despite the major UX change, 100% of users found the new flow more intuitive and “way easier to review” -partner integration engineer.</li>
+                <li>50% of users scrolled up and down repeatedly. One PM commented on liking “the simplicity…[but I] wish it was more compact.”</li>
+                <li>A couple users were uncertain what to expect if they deleted an attribute.</li>
+                
+            </ol>
+        </div>
+</div>
+<div class="splitscreen1" style="padding-top: 0px;">
+        <div class="split-left">
+            <img src="images/chameleon/chameleon2-variants.gif">
+        </div>
+        <div class="split-right blurb">
+            <h3>Prototype V2: Create Configuration</h3>
+            <p>
+            We made some layout changes based on feedback and additional analyses around creating test variants. For example, the database showed us that >90% of configurations are created with 4 or less variants. Here's the feedback for our final design (n = 4):
+            <ol class="default-bullets">
+                <li>Once again, 100% of users found the new flow intuitive (“this [UI feedback] helps” -partner integration engineer).</li>
+                <li>A compact UI fits 4 variants in view at any time. 3 out of 4 users understood how this table was building itself out. </li>
+                <li>When tasked with deleting an attribute, all users were able to do so.</li>
+                
+            </ol>
+        </div>
+</div>
 
 <div class="projects3">
     <div class="container">
         <h3>Next Steps</h3>
-        We’re in the midst of iterating on several new user flows to reach our objective in simplifying the overall process of setting up a multivariate test. So far, the user feedback for <b>Use Flow #1: Search</b> has been a combination of positive as well as requests for even more capabilities now that the users have had time to experiement and get a sense of its potential! 
-        <p>On <b>User Flow #2: Create Configurations</b>- we'll continue to test the prototype and iterate as necessary. In general we're proud of the progress we've made thus far, and I’m looking forward to analyzing more feedback so we can build out and iterate on the rest of the feature recommendations.
+        We’re in the midst of iterating on several new user flows to reach our objective in simplifying the overall process of setting up a multivariate test. So far, the user feedback for <b>Use Flow #1: Search</b> and <b>User Flow #2: Create Configurations</b> have been a combination of positive as well as requests for even more capabilities now that the users have had time to experiement and get a sense of what's possible with Chameleon 2.0! 
+
+        <p>The team and I will continue to follow this cyclical design process for addressing all the new feature recommendations we've broken up into manageable pieces together as a team. We're proud of the progress we've made thus far, and I’m looking forward to collaborating with the engineers to componentize, share feedback, and analyze the ROI as the remainder of features get released.
 
     </div>
     </div>    
