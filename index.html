@@ -1,59 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>Brenda Hu - UX Design</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Brenda Hu - UX Design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="image" property="og:image" content="images/home/hero_photo3.png">
     <meta name="description" property="og:description" content="Hi I'm Brenda, a UX Designer based in New York. Check out my portfolio!">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="images/black2_logo-new.png">
-
-    
+    <link rel="stylesheet" href="css/private.css"> 
+  <script  src="js/about1.js"></script>
 </head>
 <body>
-
-    
     <!-- Nav Bar 2 -->
-    <div class="navbarDark">
-        <div class="navbar">
-            <div class="navleft">
-                <a href="index.html">
-                    <img class="navIconDark" src="images/fff-logo-new.svg">
-                    <img class="navIconLight" src="images/000-logo-new.svg">
-                </a>
-            </div>
-            <div class="navright">
-                <a href="index.html#BH_work">Work</a>
-                <a href="pdfs/BrendaHu-Resume-2020.pdf#zoom=60" target="_blank">Resume</a>
-                <a href="about.html">About</a>
-            </div>
-        </div>
-    </div>
-    <div class="navbarTransp">
-        <div class="navbar">
-            <div class="navleft">
-                <a href="index.html">
-                    <img class="navIconDark" src="images/000-logo-new.svg">
-                    <img class="navIconLight" src="images/000-logo-new.svg">
-                </a>
-            </div>
-            <div class="navright">
-                <a href="index.html#BH_work">Work</a>
-                <a href="pdfs/BrendaHu-Resume-2020.pdf#zoom=60" target="_blank">Resume</a>
-                <a href="about.html">About</a>
-                
-            </div>
-        </div>
-    </div>
+    
      
   
     <!-- Header-->
     <header>
-        <div class="hero">
-            <div class="hero-background"><!--?xml version="1.0" encoding="UTF-8"?-->
-                    <svg viewBox="0 0 235 330" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <div class="hero-0">
+            <div class="hero-background0"><!--?xml version="1.0" encoding="UTF-8"?-->
+                    <svg style="opacity: 0.4;" viewBox="0 0 235 330" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <title>Brenda Hu - UX Designer</title>
                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
                             <g id="Group-21" transform="translate(0.000000, 1.000000)" stroke="#1F1F2F">
@@ -63,123 +32,34 @@
                     </svg>
 
            
-                    <h1>Brenda Hu</h1>
-                    <h4>UX Designer</h4>
-            </div>
+                 
+
+                   <div class="row-fluid">
+                      <label>
+                        <h3>Thanks for stopping by.</h3>
+                        To view my work, please enter the password.
+                      </label>
+                      <br>
+                      <input type="password" name="password" maxlength="20" class="span7" id="password" placeholder="Enter password" required="" style="input[type=&quot;password&quot; i] {-webkit-text-security: disc !important; padding: 1px 2px;};">
+
+                      <!-- This is the "Submit" button that will call the "onSubmit" function on the javascript page. -->
+                      <button class="button1" id="button1" onclick="onSubmit()">Submit</button>
+                      
+                      <br>
+                      <!-- This is the second button, it's hidden until the correct code is entered in the input text box from above. --> 
+                      <!--<button class="button2" id="button2"><a href="">Thanks! Click to enter.</a></button>-->
+                      <button class="button2" id="button2"><a href="">Password is incorrect.</a></button>
+
+                      <!-- if you changed the passcode length on the "script.js" page, make sure to adjust the length 
+                          on this page at the "maxlength" setting above. --> 
+
+                    </div>
+            </div>  
             
         </div>
     </header>
 
-
-<a id="BH_work"></a>
-<div class="container center-align" style="padding: 58px 0 0 0;">
-    <h3>Featured Work</h3>
-</div>
-<div class="project-grid">
-
-        <div class="project-grid-item">
-            <a href="insights.html">
-                <div class="project-link">
-                    <img src="images/home/thumbnail-insights.png">
-                    <h5>Insights Dashboard</h5>
-                    <h4>UX Design / Interaction</h4>
-                </div>
-            </a>
-        </div>
-
-        <div class="project-grid-item">
-            <a href="mapmeta.html">
-                <div class="project-link">
-                    <img src="images/home/thumbnail-map.png">
-                    <h5>Map Meta</h5>
-                    <h4>Mobile UX</h4>
-                </div>
-            </a>
-        </div>
-         <div class="project-grid-item">
-            <a href="chameleon.html">
-            <div class="project-link">
-                    <img src="images/home/thumbnail-chameleon.png">
-                    <h5>Chameleon Multivariate Testing</h5>
-                    <h4>UX Design</h4>
-            </div>
-            </a>
-        </div>
-        <!--
-        <div class="project-grid-item">
-            <a href="https://medium.com/intent-media-design/design-evolution-of-our-cultural-statements-b27409d65a89" target="_blank">
-                <div class="project-link">
-                    <img src="images/home/thumbnail-core-values.png">
-                    <h5>Core Values</h5>
-                    <h4>Illustration</h4>
-                </div>
-            </a>
-        </div>-->
-       
-         <div class="project-grid-item">
-            <a href="flytabs.html">
-                <div class="project-link">
-                    <img src="images/home/thumbnail-flytabs2.png">
-                    <h5>Flytabs</h5>
-                    <h4>Mobile UX</h4>
-                </div>
-            </a>
-        </div>
-        <div class="project-grid-item">
-            <a href="comparison-shopper.html">
-                <div class="project-link">
-                    <img src="images/home/thumbnail-comparison-shopper.png">
-                    <h5>Comparison Shopper</h5>
-                    <h4>UX Design / Interaction</h4>
-                </div>
-            </a>
-        </div>
-        <div class="project-grid-item">
-            
-                <div class="project-link2">
-                    <img src="images/home/thumbnail-design-sprint.png">
-                    <h5>TripHive - Coming Soon!</h5>
-                    <h4>UX Design / Design Sprint</h4>
-                </div>
-            
-        </div>
-
-       
-        
-    </div>
-</div>
-
-
- 
-
-
-    
-<div class="footerTransp">
-<div class="footer">
-    <div class="footerleft">
-        <p>&copy; 2020 Brenda Hu</p>
-    </div>
-    <div class="footerright">
-        <a href="https://www.linkedin.com/in/brenda-hu" target="_blank"><img src="images/footer_linkedin.png"></a>
-        <a href="https://github.com/rendabay96" target="_blank"><img src="images/footer_github.png"></a>
-        <a href="https://dribbble.com/rendabay96" target="_blank"><img src="images/footer_dribbble.png"></a>
-        <a href="mailto:hbrendax4@gmail.com" target="_blank"><img src="images/footer_mail.png"></a>
-    </div>
-</div>
-
-</div>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="js/smooth-scroll.js"></script>
-<script src="js/main.js"></script>
-<script>
-     let path = document.querySelector(".star");
- let length = path.getTotalLength();
- // console.log(length);
-
- path.style.strokeDasharray = length + ' ' + length;
- path.style.strokeDashoffset = length;
-</script>
-
 </body>
+</html>
+
+		
