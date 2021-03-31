@@ -412,6 +412,7 @@ header{
     background-color: #ffffff;
 }
 .hero-background,
+.hero-background0,
 .hero-background.gray,
 .hero-background.tertiary,
 .hero-background.gradient {
@@ -429,6 +430,10 @@ header{
     background: var(--primary-bg-color);
     -webkit-animation: fade-in-fwd 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: fade-in-fwd 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.hero-background0
+{
+    height: 100vh;
 }
 .hero-background.gray,
 .hero-background.tertiary,
@@ -465,6 +470,7 @@ header{
     text-align: center;
 }
 .hero,
+.hero-0,
 .contact {
     position: relative;
     height: 64vh;
@@ -475,16 +481,24 @@ header{
     display: -ms-flexbox;
     flex-direction: row;
 }
+.hero-0
+{
+    height: 100vh !important;
+}
 .hero.project-hero {
     height: 56vh;
     
 }
-.hero svg {
+.hero svg,
+.hero-0 svg {
     position: absolute;
     margin: 36px auto 0 auto;
     width: 90%;
     max-width: 720px;
 }
+.hero-0 svg {
+    max-height: 90vh;
+    }
 
 .text-highlight {
     position: static;
