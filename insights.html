@@ -13,76 +13,60 @@
 </head>
 <body>
     <!-- Nav Bar-->
-     <div class="navbarTransp2">
-        <div class="navbar">
-            <div class="navleft">
-                <a href="index.html">
-                    <img class="navIconDark" src="images/000-logo-new.svg">
-                    <img class="navIconLight" src="images/000-logo-new.svg">
-                </a>
-            </div>
-            <div class="navright">
-                <a href="index.html#BH_work">Work</a>
-                <a href="pdfs/BrendaHu-Resume-2020.pdf#zoom=60" target="_blank">Resume</a>
-                <a href="about.html">About</a>
+     <div class="navbar2-container">
+        <div class="navbar2">
+            <a href="index.html">
+                        <img class="navIconDark" src="images/2023-bh-logo.svg">
+            </a>
+            <nav class="site-nav">
+                <a class="styled-label-1" href="index.html#BH_work">Work</a>
+                    <a class="styled-label-1" href="pdfs/BrendaHu-Resume-2023.pdf#zoom=60" target="_blank">Resume</a>
+                    <a class="styled-label-1" href="about.html">About</a>
+            </nav>
+            <a class="button contactButton" href="about.html">Contact</a>
+            <!-- Menu btn that toggles onClick and changes appearance ( .menu-toggle CSS ) -->
+            <div class="menu-toggle">
+                <div class="hamburger"></div>
             </div>
         </div>
     </div>
-    <div class="navbarTransp">
-        <div class="navbar">
-            <div class="navleft">
-                <a href="index.html">
-                    <img class="navIconDark" src="images/000-logo-new.svg">
-                    <img class="navIconLight" src="images/000-logo-new.svg">
-                </a>
+    <!--Case study hero-->
+    <div class="hero-light">
+        <div class="split-hero-2" style="">
+            <div class="split-hero-2-left">
+                <div class="project-hero-img"><img src="images/insights/1 - insights hero.png"></div>
             </div>
-            <div class="navright">
-                <a href="index.html#BH_work">Work</a>
-                <a href="pdfs/BrendaHu-Resume-2020.pdf#zoom=60" target="_blank">Resume</a>
-                <a href="about.html">About</a>
-                
+            <div class="split-hero-2-right">
+                <div class="split-hero-2-blurb">
+                    <h2>Insights Dashboard</h2>
+                    <span class="styled-label-1">UX Research + Design • 2019</span>
+                    <p class="split-hero-2-p">
+                        We noticed a growing need for a visual front-end to Intent's machine learning platform where partners can view data insights and product recommendations in a scalable way. As lead designer I owned research + design, worked closely with data scientists to visualize complex machine learning concepts, as well as helped implement the HTML/CSS front-end for our new analytics dashboard experience.
+                    </p>
+                    <div class="project-summary-1">
+                        <div class="project-summary-1-item">
+                            <span class="styled-label-1">My Role</span>
+                            <p>Lead UX Designer</p>
+                        </div>
+                        <div class="project-summary-1-item">
+                            <span class="styled-label-1">Created for</span>
+                            <p>Internal teams + external partners</p>
+                        </div>
+
+                       <div class="project-summary-1-item">
+                            <span class="styled-label-1">Impact</span>
+                            <p>50% faster workflow processes</p>
+                            <p>10% more qualified leads generated monthly</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     
- <div class="hero project-hero">
-        <div class="hero-background gray">
-                <h1>Insights Dashboard</h1>
-                <p>An analytics dashboard for our ecommerce partners to explore our machine-learning platform.</p>
-        </div>
-        
-</div>
 
-<div class="projects1">
-    <img class="project-hero" src="images/insights/hero-insights2.png">
-    <div class="container" style="padding-top: 80px;">
-        <div class="project-summary-grid">
-            <div class="project-summary-left">
-                <b>Project Overview</b><p>At the data science company where I work, we noticed a customer need for a visual front-end to our machine learning platform where partners can view data insights and product recommendations in a scalable way. Without this tool, our internal teams battled inefficiencies while onboarding new partners and generating custom insights. 
-                <br><br>
-                As lead designer I owned research and design as well as worked closely with data scientists to visualize complex machine learning concepts in an intuitive way. Within 4 months, I helped implement the HTML/CSS front-end and launch our new dashboard experience. </p>
-            </div>
-            <div class="project-summary-right">
-                <div class="project-summary-right-item">
-                    <b>My Role</b>
-                    <p>UX Research + Design</p>
-                    <p>HTML/CSS</p>
-                </div>
-                <div class="project-summary-right-item">
-                    <b>Created For</b>
-                    <p>Internal teams</p>
-                    <p>External partners</p>
-                </div>
-                <div class="project-summary-right-item">
-                    <b>Impact</b>
-                    <p>50% faster workflow processes</p>
-                    <p>10% more qualified leads generated monthly</p>
-                </div>
-            </div>
-                
-        </div>
-    </div>
-</div>
+
+
 
 
 
@@ -151,7 +135,7 @@
         <img src="images/insights/insights-wireframes.png">
     </div>
     <div class="split-right blurb">
-        <h3>Design Direction:<br>The Dashboard</h3>
+        <h3>Design Direction</h3>
         <p>
         During the wireframing stage, I pivoted the design direction; the first design I tested (<b>Option A</b>) was a dashboard with multiple graphs on one page. However when placed in front of users (n = 4), the below feedback led me to ultimately recommend <b>Option B</b> for our design direction:
         <ol class="default-bullets">
@@ -166,7 +150,7 @@
 <div class="projects1">
     <div class="container" style="padding-bottom: 0px;">
         <h3>Usability Testing: The Dashboard</h3>
-        Since we had limited access to external user input (due to strict business constraints) and our partner-facing teams had frequent access to the needs and feedback of our partners, they became our proxy users in our initial usability testing sessions. Our prompt for the user was: <b>Visit Insights to view up-to-date data analyses generated for your site. Interact with the site to learn more, and inquire about next steps.</b>
+        Since we had limited access to external user input due to strict business constraints, and our partner-facing teams had frequent access to the needs and feedback of our partners, they became our proxy users in our initial usability testing sessions. Our prompt for the user was: <b>Visit Insights to view up-to-date data analyses generated for your site. Interact with the site to learn more, and inquire about next steps.</b>
 
         <p>
         Below are some usability test results for just one page of the dashboard.
@@ -247,10 +231,10 @@
         <h3>Conclusion</h3>
         <!--<img src="images/insights/insights-dashboard.gif">-->
         
-        Self-service onboarding is now <a href="https://www.intent.com" target="_blank">live</a> on our website and allows partners to sign up for access to the Insights Dashboard. While we continue to integrate new partners, I'm collaborating closely with data scientists and optimization managers to translate additional machine-learning concepts to interactive experiences that are intuitive and educational. The feedback we've gotten validates the potential for this product to strengthen existing relationships as well as open conversations with untapped markets.
+        Self-service onboarding is now live on our website and allows partners to sign up for access to the Insights Dashboard. While we continue to integrate new partners, I'm collaborating closely with data scientists and optimization managers to translate additional machine-learning concepts to interactive experiences that are intuitive and educational. The feedback we've gotten validates the potential for this product to strengthen existing relationships as well as open conversations with untapped markets.
         <p>This project helped me learn to empathize with two different types of users: our internal teams, in need of a scalable process to onboard partners, generate insights, and pitch new data products; and our external ecommerce partners, who needed an intuitive tool to opt into additional applications on our machine-learning platform. Going forward, I'm insisting on shifting more emphasis toward championing the partner's needs.
         <p>Due to confidentiality reasons, feel free to contact me directly for a demo of the dashboard or to discuss my design process in further detail!
-        
+        <a class="button2" href="index.html#BH_work">Back to projects</a>
     </div>
 </div>
 
@@ -262,20 +246,17 @@
 <div class="footerDark">
 <div class="footer">
     <div class="footerleft">
-        <p>&copy; 2020 Brenda Hu</p>
+        <p>&copy; 2023 Brenda Hu</p>
     </div>
     <div class="footerright">
         <a href="https://www.linkedin.com/in/brenda-hu" target="_blank"><img src="images/footer_fff_linkedin.png"></a>
         <a href="https://github.com/rendabay96" target="_blank"><img src="images/footer_fff_github.png"></a>
-        <a href="https://dribbble.com/rendabay96" target="_blank"><img src="images/footer_fff_dribbble.png"></a>
-        <a href="mailto:hbrendax4@gmail.com" target="_blank"><img src="images/footer_fff_mail.png"></a>
+        <a href="about.html"><img src="images/footer_fff_mail.png"></a>
     </div>
-
 </div>
-
 </div>
     
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/smooth-scroll.js"></script>
-<script src="js/main2.js"></script>
+<script src="js/main.js"></script>
 </body>

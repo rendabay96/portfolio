@@ -9,74 +9,59 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="images/black2_logo-new.png">
+    <style>body {background: #f5f5f5;}</style>
 
     
 </head>
 <body>
 <!-- Nav Bar-->
-     <div class="navbarTransp2">
-        <div class="navbar">
-            <div class="navleft">
-                <a href="index.html">
-                    <img class="navIconDark" src="images/000-logo-new.svg">
-                    <img class="navIconLight" src="images/000-logo-new.svg">
-                </a>
-            </div>
-            <div class="navright">
-                <a href="index.html#BH_work">Work</a>
-                <a href="pdfs/BrendaHu-Resume-2020.pdf#zoom=60" target="_blank">Resume</a>
-                <a href="about.html">About</a>
+     <div class="navbar2-container">
+        <div class="navbar2">
+            <a href="index.html">
+                        <img class="navIconDark" src="images/2023-bh-logo.svg">
+            </a>
+            <nav class="site-nav">
+                <a class="styled-label-1" href="index.html#BH_work">Work</a>
+                    <a class="styled-label-1" href="pdfs/BrendaHu-Resume-2023.pdf#zoom=60" target="_blank">Resume</a>
+                    <a class="styled-label-1" href="about.html">About</a>
+            </nav>
+            <a class="button contactButton" href="about.html">Contact</a>
+            <div class="menu-toggle">
+                <div class="hamburger"></div>
             </div>
         </div>
     </div>
-    <div class="navbarTransp">
-        <div class="navbar">
-            <div class="navleft">
-                <a href="index.html">
-                    <img class="navIconDark" src="images/000-logo-new.svg">
-                    <img class="navIconLight" src="images/000-logo-new.svg">
-                </a>
+
+
+    <div class="hero-light">
+        <div class="split-hero-2 aboutme">
+            <div class="split-hero-2-left">
+                <div class="project-hero-img"><img src="images/home/about_photo.png" style="object-position: center"></div>
             </div>
-            <div class="navright">
-                <a href="index.html#BH_work">Work</a>
-                <a href="pdfs/BrendaHu-Resume-2020.pdf#zoom=60" target="_blank">Resume</a>
-                <a href="about.html">About</a>
-                
+            <div class="split-hero-2-right">
+                <div class="split-hero-2-blurb">
+                    <h2>Hi, I'm Brenda.</h2>
+                    <p class="split-hero-2-p">
+                        I'm a product designer based in NY. My design journey began while discovering that the most gratifying part of my work in a previous role was designing and testing the tools I created to streamline team efficiency. Today, I continue to enjoy distilling complex concepts into digestible pieces for shared understanding, and I believe even the gnarliest problems deserve simple solutions. Most recently, I designed enterprise software experiences as a Senior Product Designer at Okta.
+                        <br><br>
+                        Outside of work, you may find me exploring a new city, playing tennis, skiing, camping, or painting my outdoor adventures.
+                        I'm always open to connecting, so find me on <a href="https://www.linkedin.com/in/brenda-hu/" target="_blank">LinkedIn</a> or get in touch below!
+                        <a class="button" href="mailto:hbrendax4@gmail.com">Get in touch</a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
     
-
-    <div class="aboutme">
-        <div class="splitscreen1" style="padding: 0;">
-            <div class="split-left" style="text-align: center;">
-                <img src="images/home/hero_photo3.png">
-            </div>
-            <div class="split-right blurb">
-                <h3>Hi, I'm Brenda.</h3>
-               My design journey began with my experience developing new workflow processes for a growing team at a previous role. There, I discovered that the most gratifying parts of my job were designing and testing the tools I created to streamline team efficiency. I continue to enjoy translating complex ideas into solutions that are not only user-friendly, but empowering. Today, I’m designing enterprise software experiences as a Product Designer at Okta.
-               
-                <p>Want to collaborate? Find me on <a href="https://www.linkedin.com/in/brenda-hu/" target="_blank">LinkedIn</a> or get in touch below.
-            <a class="button filled" href="mailto:hbrendax4@gmail.com" target="_blank">Send A Message</a>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-    
-<div class="footerTransp">
+<div class="footerTransp aboutme" style="background: #f5f5f5">
 <div class="footer">
     <div class="footerleft">
-        <p>&copy; 2020 Brenda Hu</p>
+        <p>&copy; 2023 Brenda Hu</p>
     </div>
     <div class="footerright">
         <a href="https://www.linkedin.com/in/brenda-hu" target="_blank"><img src="images/footer_linkedin.png"></a>
         <a href="https://github.com/rendabay96" target="_blank"><img src="images/footer_github.png"></a>
-        <a href="https://dribbble.com/rendabay96" target="_blank"><img src="images/footer_dribbble.png"></a>
-        <a href="mailto:hbrendax4@gmail.com" target="_blank"><img src="images/footer_mail.png"></a>
+        <a href="about.html"><img src="images/footer_mail.png"></a>
     </div>
 </div>
 
@@ -86,13 +71,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/smooth-scroll.js"></script>
 <script src="js/main.js"></script>
-<script>
-     let path = document.querySelector(".star");
- let length = path.getTotalLength();
- // console.log(length);
 
- path.style.strokeDasharray = length + ' ' + length;
- path.style.strokeDashoffset = length;
-</script>
 
 </body>
