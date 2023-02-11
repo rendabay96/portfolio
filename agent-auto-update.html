@@ -5,6 +5,10 @@
     <title>Brenda Hu - UX/UI Design</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet"
+          type="text/css"
+          href="css/lightbox.min.css">
+    <!--<link rel="stylesheet" href="css/slideshow.css">-->
     <link rel="icon" type="image/png" href="images/black2_logo-new.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -55,7 +59,7 @@
                        <div class="project-summary-1-item">
                             <span class="styled-label-1">Impact</span> 
                             <p>2 weeks post-launch: feature adoption &#8593;300% 
-                            <p>6 months post-launch: Okta agent updates &#8593;800%</p> <!--Jan,Feb 215 Mar 471. to Jun 1 846 -->
+                            <p>6 months post-launch: Okta agent updates &#8593;293%</p> <!--Jan,Feb 215 Mar 471. to Jun 1 846 -->
                         </div>
                     </div>
                 </div>
@@ -66,74 +70,374 @@
 
 
 
-<div class="projects1">
+<div class="projects2">
     <div class="container">
-        <h3>Case study: Coming soon</h3>
+        <!--<h3>Case study: Coming soon</h3>
         The new and improved Okta agent update process features automated agent updates on-demand or on a predetermined schedule. Since going live, not only have our analytics shown early success in feature adoption, some customers have reached out with glowing reviews on how it addressed previous painpoints and improved their workflows immensely.
         <br><br>
         Stay tuned for the complete case study!
-        <a class="button" href="index.html#BH_work">Back to projects</a>
-        <!--
-        In order to update an AD agent, the admin needs to download the new agent and go through ~22 steps between the host Windows machine and web browser to install the new version. While users knew that by keeping agents up-to-date, they'll benefit from bug fixes and new features as well as migrate from versions that are no longer supported, our users were not proactively updating and even often wait until an Okta customer success manager has prompted them to update. Simplifying this process to a one-click solution (internally referred to as agent auto-update) was already on the roadmap, but the insights we gathered from our user interviews told us that their struggles went beyond the tediousness; things were more complicated than that. We interviewed N IT admins who maintain their Active Directory integations with Okta and gained the following telling insights as to why that is:
+        <a class="button" href="index.html#BH_work">Back to projects</a>-->
+        <h3>Problem Statement</h3>
+        When an IT administrator of an organization integrates their Active Directory (AD) with Okta to enable employees with single sign-on for app access or to manage their user profile and lifecycle changes, they must first install one lightweight agent per AD instance which runs on the Windows host machine and keeps all changes between AD and Okta synchronized. Admins are instructed to keep these agents up-to-date as new versions containing bug fixes and new features are released. 
+
+        <a class="example-image-link" href="images/agents/diagram - AD integration.png" data-lightbox="example-1">
+                <img class="example-image" src="images/agents/diagram - AD integration.png" alt="image-1" />
+        </a>
+        <p class="image-captions">Diagram of an Okta + AD integration. Many customers were operating on outdated AD agents.</p>
         <br>
-        <br>
+        <p>Unfortunately, we discovered that the majority of our admins were <b>not</b> proactively updating their agents and would often wait until an Okta customer success manager prompts them to do so. We predicted it was due to the extremely manual process, but there were much more complicated reasons. My team and I set out to investigate how we might improve the Okta AD agent update workflow so that our users were not missing out on new functionalities.
+
+ </div>
+</div>
+<div class="projects1">
+    <div class="container">
+        <h3>Researching The Problem</h3>
+            My team and I had uncovered a popular feature request (275+ upvotes) from Okta's customer forum implying that reducing the steps to updating agents would already help immensely. However, the data we gathered from user interviews (n = 5) told us that their frustrations went beyond just the tedious agent update process.
+        
+        <a class="example-image-link" href="images/agents/agents research - user journey.png" data-lightbox="example-1">
+                <img class="example-image" src="images/agents/agents research - user journey.png" alt="image-1" />
+        </a>
+        <p class="image-captions">User journey + user flow mapping done on Figma and Miro boards</p>
+        <a class="example-image-link" href="images/agents/agents page - original.png" data-lightbox="example-1">
+                <img class="example-image" src="images/agents/agents page - original.png" alt="image-1" />
+        </a>
+        <p class="image-captions">Common pain points mentioned regarding the current AD Agents page.</p>
+        <br><br>
+        <p>My research partner and I synthesized our raw interview notes and shared the the following key insights with PMs, engineers, and architects to align everyone as we began discussing opportunities for UX improvement:</p>
         <div class="project-table problems">
-            <div class="project-table-left">
-                <img src="images/insights/problem1.svg">
+            <div class="project-table-left" style="padding: 24px;">
+                <img src="images/agents/avatar-1.png">
+                <p class="image-captions" style="margin: 12px auto">"The whole process including review takes about a week per domain."</p>
             </div>
             <div class="project-table-right">
-                <b>Extremely manual process, one that they must repeat if multiple agents are in use (which is required).</b>
-                <span>Have to physically be at the host machinese to run installer. 22 steps per agent.</span>
+                <b>1.) Updating AD agents to the latest version is extremely manual and time-consuming, so most admins update only 1-2x per year.</b>
+                <p>Today, admins have to download the new agent onto the Windows host machine (which may not be where the admin works day-to-day), and go through ~22 steps between the host machine and web browser to install it. Many users manage multiple AD domains and 15+ agents per domain, requiring days to weeks to complete.</p>
             </div>
         </div>
         <div class="project-table problems">
-            <div class="project-table-left">
-                <img src="images/insights/problem2.svg">
+            <div class="project-table-left" style="padding: 24px;">
+                <img src="images/agents/avatar-2.png">
+                <p class="image-captions" style="margin: 12px auto">If a job failed, "I'd want to stop it from continuing...[and] an error code to figure out what the issue is."</p>
             </div>
             <div class="project-table-right">
-                <b>Difficult to time, so at most did it 1-2 times per year. </b>
-                <span>Hard for users to carve out the downtime required for agents to be updated. Critical for users to make sure there's always an agent online.</span>
+                <b>2.) Admins are wary of new agent versions as they lack the visibility they need to troubleshoot when things go wrong.</b>
+                <p>At the moment, if an update fails, the admin digs through various system logs and reports to troubleshoot. To mitigate possible faulty agent installations, admins have gone into the habit of testing new versions in a preview environment prior to installing in production, which doubles the manual work required. </p>
             </div>
         </div>
         <div class="project-table problems">
-            <div class="project-table-left">
-                <img src="images/insights/problem3.svg">
+            <div class="project-table-left" style="padding: 24px;">
+                <img src="images/agents/avatar-3.png">
+                <p class="image-captions" style="margin: 12px auto">"I would want the primary agent to update first...and then the rest [of the agents] in a specific order."</p>
             </div>
             <div class="project-table-right">
-                <b>They are wary of new agents, so almost always test with a preview org first.</b>
-                <span>They typically test out a new agent in their preview org before actually installing it, in case of bugs and other unforseen complications. Their end users are constantly logging into Okta, so if something goes wrong, their access is blocked.</span>
+                <b>3.) Though it requires more planning, admins intentionally update agents one by one for redundancy.</b>
+                <p>Generally the "primary" agent of an AD instance is updated first, then users move onto the next one. Their end users are constantly logging into Okta, so if something goes wrong and all the agents are offline during an update, user access is blocked. Thus admins spend time and effort planning the downtime required for agents to be updated.</p>
             </div>
         </div>
-    -->
     </div>
 </div>
-
- <!--   
 <div class="projects3">
     <div class="container">
         <h3>The Objective</h3>
-          From our research findings we synthesized that our users were constantly putting off updating their agents until the last possible moment. So we knew our solution had to address this. We asked ourselves, how might we incentivize admins to proactively keep their agents up-to-date? How might we gain their trust in the agent auto-update feature?
+        Our users were struggling to monitor and update their Okta AD agents in timely manner, even at times putting off the task until the last possible moment when an Okta customer-facing employee had to get involved. So our solution had to do more than just address current UI issues that made this difficult - we asked ourselves, how might we incentivize admins to proactively keep their agents up-to-date, as well as regain their trust in the agent update process moving forward. 
  
     </div>
 </div>
+<div class="projects1">
+    <div class="container">
+        <h3>Design Direction</h3>
+       
+         <b>Business constraints:</b>
+         <p>As is the case for all enterprise-level design, we couldn't forget about the business and tech contraints. While workshopping concepts with PMs, engineers, and architects, we aligned on the following main constraints:
+            <ol class="default-bullets"> 
+                <li>"Agent auto-update" (as we began to call it) will only be supported by the next released version of the Okta AD agent. This meant our users must first go through the manual process one last time to enable the new features moving forward.</li>
+                <li>At the time of developing this feature, the Okta admin UI was undergoing a complete redesign. Because the new design system would not be ready by the time our engineers would build the feature, I had to use existing components of the legacy design system as much as possible, while ensuring their styles were compatible with the future design system.</li>
+            </ol>
+        <br>
+        <b>Hypothesis:</b>
+        <p>If we provide more visibility into AD agent statuses and guide users toward enabling automatic updates, then users will update their agents in a timely manner because of the added incentive of a much easier experience moving forward.
+        <br>
+        <br>
+        <p><b>User flows:</b>
+            <p>In collaboration with my cross-functional team, I mapped out the primary user flows in scope for our MVP:</p>
+     
+            <a class="example-image-link" href="images/agents/user flow - agent auto-update.png" data-lightbox="example-1">
+                <img class="example-image" src="images/agents/user flow - agent auto-update.png" alt="image-1" />
+            </a>
+        
+
+            <ol class="default-bullets"> 
+                <!--<li>As an admin, I want to download the latest AD agent so that I can leverage the auto-update feature moving forward.</li>-->
+                <li>As an admin, I want to update my agents now so that I can select specific agents and monitor their progress.</li>
+                <li>
+                    <div>As an admin, I want to schedule an agent auto-update for later so that the job only runs during a specific window of time.*
+                    <p class="image-captions" style="margin: 12px auto; text-align: left;">* This was originally out of scope. Fortunately, supported by the user research and user testing results my research partner and I had gathered, we pushed for a comprehensive solution including taking automation to the next level by adding a scheduler. This was a huge win for us UX evangelists and our users! &#127881; &#127881;</p>
+                    </div>
+                </li>
+            </ol>
+    </div>
+</div>
+
+    <div class="splitscreen2" style="padding-bottom: 0px;">
+        <div class="split-left">
+            <a class="example-image-link" href="images/agents/agents wireframes.png" data-lightbox="example-1">
+                    <img class="example-image" src="images/agents/agents wireframes.png" alt="image-1" />
+            </a>
+        </div>
+        <div class="split-right blurb">
+            <h3>Wireframes</h3>
+            <p>
+             Concepts from ideation start to materialize as I shop around wireframes with stakeholders. Not only was involving engineers and architects at this stage integral to learning about technical feasibility, it also helped everyone feel more invested in pursuing the best user experience. 
+             <!--<ol class="default-bullets"> 
+                    <li>Bulk updates to allow multiple agents to be updated on-demand</li>
+                    <li>Visibility into job progress and management</li>
+                    <li>Custom settings for scheduled auto-updates </li>
+            </ol>-->
+            </p> 
+        </div>
+    </div>
+    <div class="splitscreen2">
+        <div class="split-left">
+            <a class="example-image-link" href="images/agents/agent job flows.png" data-lightbox="example-1">
+                    <img class="example-image" src="images/agents/agent job flows.png" alt="image-1" />
+            </a>
+        </div>
+        <div class="split-right blurb">
+            <h3>Job Flows + Error Handling</h3>
+            <p>
+             More visibility into our async job flows (i.e. once an agent update job starts) was a big theme during user research. This was definitely one of the more convoluted aspects of the feature, so I paired with an engineer to design all the possible job flows depending on the admin's custom configurations, including error handling.
+            </p>
+        </div>
+    </div>
+
+<!--<div class="projects2">
+    <div class="container">
+        <h3>User Flow 0 - Enable Auto-updates</h3>
+        <b>As an admin, I want to download the latest AD agent so that I can leverage the auto-update feature moving forward.</b>
+        <p>Because our tech constraint required users to perform one last manual update in order to enable the automatic updates moving forward, we carefully injected some enticing messaging.</p>
+        <a class="example-image-link" href="images/agents/user flow 1 - agents - v2.png" data-lightbox="example-1">
+            <img class="example-image" src="images/agents/user flow 1 - agents - v2.png" alt="image-1" />
+        </a>
+        <p class="image-captions">The redesigned AD Agents features UX improvments as well as guidance on how to enable the new auto-update feature.</p>
+            <ol class="default-bullets">
+                <li>Users are informed of the new Agent Auto-update feature which can be available upon the next (and last) agent installation.</li>
+                <li>Previously, terminology used across touch points (e.g. the Okta admin portal, AD host machine, email notifications, system logs) depicting agent status was confusing and inconsistent. We improved scannability with table headers as well as reconciled terminology globally.</li>
+                <li>Once an extremely manual process, updating agents can be automated completely by setting a schedule. A placeholder for the schedule serves as an educational moment to incentivize the user to enable the feature with one last manual update.</li>
+                
+            </ol>
+    </div>
+</div>
 -->
+<div class="projects1">
+    <div class="container">
+        <h3>User Flow 1: Agent Updates On-demand</h3>
+        <b>As an admin, I want to update my agents now so that I can select specific agents and monitor their progress.</b>
+        <p>My UX research partner and I ran usability testing sessions with five (n = 5) admins who are in charge of managing their directory integration with Okta. Between the 2 sessions, we iterated as trends started to arise on what users needed for agent updates on-demand.</p>
+        <br>
+        <br>
+        
+        <div class="mySlideshow-container">
+            <b>Agent updates on-demand: V1</b>
+            <div class="mySlideshow">
+                <div class="mySlides mySlides-0">
+                    <a class="example-image-link" href="images/agents/user flow 1 - v1 - part1.gif" data-lightbox="example-1">
+                        <img src="images/agents/user flow 1 - v1 - part1.gif" style="width:100%;max-width: 600px;margin: 24px auto;border:solid 1px rgba(110,110,120,0.25);">
+                    </a>
+                    <div class="slideshow-caption">    
+                        <ol class="default-bullets">
+                            <li>All users were able to easily locate this feature and kick off a job.</li>
+                            <li>Originally, longer tables were hard to read and terminology used across touch points (e.g. the Okta admin portal, email alerts, system logs) was inconsistent and confusing, so we improved scannability with table headers as well as reconciled terminology globally.</li>
+                            <li>Everything from actions to dynamic messaging took place within the table, which was a bit difficult for some users to grasp.</li>
+                        </ol>
+                    </div>
+                    <div class="slideshow-btns">
+                            <div class="slideshow-left" onclick="plusDivs(-1, 0)">&#8592;</div>
+                            <span>1 of 2</span>
+                            <div class="slideshow-right" onclick="plusDivs(1, 0)">&#8594;</div>
+                    </div>
+                </div>
+                <div class="mySlides mySlides-0">
+                    <a class="example-image-link" href="images/agents/user flow 1 - v1 - part2.gif" data-lightbox="example-1">
+                        <img src="images/agents/user flow 1 - v1 - part2.gif" style="width:100%;max-width: 600px;margin: 24px auto;border:solid 1px rgba(110,110,120,0.25);">
+                    </a>
+                    <div class="slideshow-caption">    
+                        <ol class="default-bullets">
+                            <li>The addition of batched updates was exciting, but users wanted to control the priority order in which agents would be updated.</li>
+                            <li>Every user mentioned how important it was that the agents were updated one at a time. It was not clear this was the case before they kicked off the job.</li>
+                            <li>New job banners provided better visibility. However, all users said they'd want to receive some sort of notification (i.e. email, Slack) once updates were complete.</li>
+                        </ol>
+                    </div>
+                    <div class="slideshow-btns">
+                            <div class="slideshow-left" onclick="plusDivs(-1, 0)">&#8592;</div>
+                            <span>2 of 2</span>
+                            <div class="slideshow-right" onclick="plusDivs(1, 0)">&#8594;</div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        <br>
+        <br>
+        
+        <div class="mySlideshow-container">
+            <b>Agent updates on-demand: Final design</b>
+            <div class="mySlideshow">
+                <div class="mySlides mySlides-1">
+                    <a class="example-image-link" href="images/agents/user flow 1 - v2 - part1.gif" data-lightbox="example-1">
+                        <img src="images/agents/user flow 1 - v2 - part1.gif" style="width:100%;max-width: 600px;margin: 24px auto;border:solid 1px rgba(110,110,120,0.25);">
+                    </a>
+                    <div class="slideshow-caption">    
+                        <ol class="default-bullets">
+                            <li>Unlike in V1, the CTA takes the user to an interstitial page for selecting agents. This allowed more focus and less mental load.</li>
+                            <li>Because users care about the priority order in which agents went offline to update, our final design allows the user to reorder the agents before starting the job.</li>
+                        </ol>
+                    </div>
+                    <div class="slideshow-btns">
+                            <div class="slideshow-left" onclick="plusDivs(-1, 1)">&#8592;</div>
+                            <span>1 of 2</span>
+                            <div class="slideshow-right" onclick="plusDivs(1, 1)">&#8594;</div>
+                    </div>
+                </div>
+                <div class="mySlides mySlides-1">
+                    <a class="example-image-link" href="images/agents/user flow 1 - v2 - part2.gif" data-lightbox="example-1">
+                        <img src="images/agents/user flow 1 - v2 - part2.gif" style="width:100%;max-width: 600px;margin: 24px auto;border:solid 1px rgba(110,110,120,0.25);">
+                    </a>
+                    <div class="slideshow-caption">    
+                        <ol class="default-bullets">
+                            <li>The expandable job banners provide admins the peace of mind that updates happen consecutively, one by one.</li>
+                            <li>Everything they need to monitor updates - from time remaining to available actions if an update fails - is shown in-app as well as via email notifications.</li>
+                        </ol>
+                    </div>
+                    <div class="slideshow-btns">
+                            <div class="slideshow-left" onclick="plusDivs(-1, 1)">&#8592;</div>
+                            <span>2 of 2</span>
+                            <div class="slideshow-right" onclick="plusDivs(1, 1)">&#8594;</div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="projects1">
+    <div class="container">
+        <h3>User Flow 2: Scheduled Agent Auto-updates</h3>
+        <b>As an admin, I want to schedule an agent auto-update for later so that the job only runs during a specific window of time.</b>
+        <p>This flow received the most (enthusiastic) feedback during testing. For example, our users were delighted by the prospect of "setting and forgetting" an agent update schedule, completely removing the manual task aside from receiving status alerts. The scheduler evolved quite a bit, informed by not only user feedback but learnings as new tech constraints were discovered. Every design decision we made unveiled many technical implications. In the end, we were proud to launch something that became a hit almost instantly.</p>
+
+        <br>
+        <br>
+        <div class="mySlideshow-container">
+            <b>Scheduled auto-updates: V1</b>
+            <div class="mySlideshow">
+                <div class="mySlides mySlides-2">
+                    <a class="example-image-link" href="images/agents/user flow 2 - v1 - part1.gif" data-lightbox="example-1">
+                        <img src="images/agents/user flow 2 - v1 - part1.gif" style="width:100%;max-width: 600px;margin: 24px auto;border:solid 1px rgba(110,110,120,0.25);">
+                    </a>
+                    <div class="slideshow-caption">    
+                        <ol class="default-bullets">
+                            <li>Almost every user we spoke with jumped ahead and wanted to try the scheduled auto-update, which was a great sign!</li>
+                            <li>Once again, users mentioned the desire to determine the order of which agents would be updated.</li>
+                        </ol>
+                    </div>
+                    <div class="slideshow-btns">
+                            <div class="slideshow-left" onclick="plusDivs(-1, 2)">&#8592;</div>
+                            <span>1 of 2</span>
+                            <div class="slideshow-right" onclick="plusDivs(1, 2)">&#8594;</div>
+                    </div>
+                </div>
+                <div class="mySlides mySlides-2">
+                    <a class="example-image-link" href="images/agents/user flow 2 - v1 - part2.gif" data-lightbox="example-1">
+                        <img src="images/agents/user flow 2 - v1 - part2.gif" style="width:100%;max-width: 600px;margin: 24px auto;border:solid 1px rgba(110,110,120,0.25);">
+                    </a>
+                    <div class="slideshow-caption">    
+                        <ol class="default-bullets">
+                            <li>While this design allowed users to set one schedule, 4 out of 5 users wished for the ability to set multiple schedules within an AD instance.</li>
+                            <li>In user flow #1 (updates on-demand), users saw the option to 'cancel' a job if one agent failed in the middle of the process. When we asked what they would expect to happen if an agent failed during a scheduled update, users were split on what they preferred. This signaled to us that the expected behavior should be configurable.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="slideshow-btns">
+                            <div class="slideshow-left" onclick="plusDivs(-1, 2)">&#8592;</div>
+                            <span>2 of 2</span>
+                            <div class="slideshow-right" onclick="plusDivs(1, 2)">&#8594;</div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        <br>
+        <br>
+        
+        <div class="mySlideshow-container">
+            <b>Scheduled auto-updates: Final design</b>
+            <div class="mySlideshow">
+                <div class="mySlides mySlides-3">
+                    <a class="example-image-link" href="images/agents/user flow 2 - v2 - part1.gif" data-lightbox="example-1">
+                        <img src="images/agents/user flow 2 - v2 - part1.gif" style="width:100%;max-width: 600px;margin: 24px auto;border:solid 1px rgba(110,110,120,0.25);">
+                    </a>
+                    <div class="slideshow-caption">    
+                        <ol class="default-bullets">
+                            <li>Unlike in V1, the user is taken to an interstitial page to easily add one or more scheduled auto-updates.</li>
+                            <li>Because we heard mixed preferences on the expected behavior upon an update failure, our final design offers a custom setting for users to configure.</li>
+                        </ol>
+                    </div>
+                    <div class="slideshow-btns">
+                            <div class="slideshow-left" onclick="plusDivs(-1, 3)">&#8592;</div>
+                            <span>1 of 2</span>
+                            <div class="slideshow-right" onclick="plusDivs(1, 3)">&#8594;</div>
+                    </div>
+                </div>
+                <div class="mySlides mySlides-3">
+                    <a class="example-image-link" href="images/agents/user flow 2 - v2 - part2.gif" data-lightbox="example-1">
+                        <img src="images/agents/user flow 2 - v2 - part2.gif" style="width:100%;max-width: 600px;margin: 24px auto;border:solid 1px rgba(110,110,120,0.25);">
+                    </a>
+                    
+                    <div class="slideshow-caption">    
+                        <ol class="default-bullets">
+                            <li>Sometimes users manage multiple clients' AD which can all have different periods of down time. For the final design, the admin can specify a window of time for the agent to be updated (i.e. off-peak hours on the weekends).</li>
+                            <li>Similar to user flow #1 (on-demand), a priority order can be set for a scheduled update as well.
+                             <li>Once schedules are saved, users can view a summary on the main Agents page. Admins can go back to edit, turn on/off, and configure more schedules.</li>
+                        </ol>
+                    </div>
+                    <div class="slideshow-btns">
+                            <div class="slideshow-left" onclick="plusDivs(-1, 3)">&#8592;</div>
+                            <span>2 of 2</span>
+                            <div class="slideshow-right" onclick="plusDivs(1, 3)">&#8594;</div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="projects3">
+    <div class="container">
+        <h3>Conclusion</h3>
+        <p>Once an extremely manual process often requiring admins to log in to several different servers with different accounts to update all of their agents, individual and batched agent updates can now be initiated from the Okta admin portal. To make things even easier, admins can also configure scheduled automatic updates at a specified timed. So far, this feature has seen a ton of engagement. Just 6 months after launch, Okta has observed agent auto-updates increase by 293%! We've even had a major customer reach out with a glowing review:</p>
+        <div class="quotes-large"><i>“My team is very small...The AD agent and Okta directory sequence was a huge part of our decision of going with Okta, because of the huge number of ADs we have with our customers. So auto-update was huge for us. If you start thinking of the thousands of implementations we have, nobody wants to go back thru and update those agents over time, whether it's because of security reasons... [etc.]” - Director of engineering at a SaaS company</i></div>
+
+        
+        <p>So what's next? We're hoping to build out this feature for all the different agents that Okta offers via other types of integrations, and with ever iteration, make it even more robust and scalable.
+        <a class="button2" href="index.html#BH_work">Back to projects</a>
+    </div>
+
+</div>
 
 
 
 
-
-
-
-
-<div class="footerTransp">
+<div class="footerDark">
 <div class="footer">
     <div class="footerleft">
         <p>&copy; 2023 Brenda Hu</p>
     </div>
     <div class="footerright">
-        <a href="https://www.linkedin.com/in/brenda-hu" target="_blank"><img src="images/footer_linkedin.png"></a>
-        <a href="https://github.com/rendabay96" target="_blank"><img src="images/footer_github.png"></a>
-        <a href="about.html"><img src="images/footer_mail.png"></a>
+        <a href="https://www.linkedin.com/in/brenda-hu" target="_blank"><img src="images/footer_fff_linkedin.png"></a>
+        <a href="https://github.com/rendabay96" target="_blank"><img src="images/footer_fff_github.png"></a>
+        <a href="about.html"><img src="images/footer_fff_mail.png"></a>
     </div>
 </div>
 </div>
@@ -141,4 +445,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/smooth-scroll.js"></script>
 <script src="js/main.js"></script>
+<script src="js/lightbox-plus-jquery.min.js"></script>
+<script src="js/slideshow.js"></script>
 </body>
