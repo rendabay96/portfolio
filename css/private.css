@@ -1,54 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;1,200;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;1,200;1,300&display=swap');
 
+:root {
+    --primary-bg-color: #1f1f2f;
+    --secondary-bg-color: #EC3548;  
+    --tertiary-bg-color: #f5f5f5;
+    --tertiary2-bg-color: #DCDCE6; 
+    --primary-font-color: #1f1f2f;
+    --tertiary-font-color: #f5f5f5;
+    --secondary-url-color: #EC3548;
 
-.hero-0 .hero-background0 .row-fluid {
-    max-width: 410px;
+   
+}
+#dialogWrap {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: table;
+    background-color:  var(--tertiary-bg-color);
+}
+
+#dialogWrapCell {
+    display: table-cell;
     text-align: center;
-    z-index: 9999;
+    vertical-align: middle;
 }
-.row-fluid h5 {
-    margin-bottom: 12px;
+
+#mainDialog {
+    max-width: 348px;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    text-align: left;
 }
-.hero-0 .hero-background0 .button1 {
-    margin-top: 20px;
-    width: 200px;
-    padding: 6px 12px;
+#mainDialog > * {
+    padding: 10px 30px;
+}
+#passArea {
+    padding: 40px 40px;
     background-color: white;
-    border: 2px solid white;
-    color: #1f1f2f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.hero-0 .hero-background0 .button1:hover {
-	cursor: pointer;
+#passArea img {
+    width: 48px;
+    height: 48px;
+}   
+#passArea > * {
+    margin: 0px auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
-.hero-0 .hero-background0 label {
+p#passwordPrompt {
+    margin: 24px auto;
 }
-
-
-
-.button1, input {
-    overflow: visible;
-    margin-top: 24px;
-    height: 44px;
-    max-width: 200px;
-    border: 2px solid white;
-    background-color: rgba(31,31,47,0.7);
-    box-sizing: border-box;
-}
-.button1 {
-    max-width: 100px;
-    margin-left: -8px;
-}
-
-input#my-designs {
-    padding: 6px 12px;
-    color: white;
+#pass {
+    width: 240px;
+    height: 46px;
+    font-size: 14px;
+    padding: 0px 12px;
+    border: solid 1px var(--primary-font-color);
+    font-family: inherit;
 }
 
-.hero-0 .hero-background0 .button2 {
+#messageWrapper {
+    width: 100%;
+    text-align: left;
+    line-height: 32px;
+}
+textarea:focus, input:focus {
+    outline: none;
+}
+.notifyText {
     display: none;
-    background-color: transparent;
-    box-shadow: none;
-    border: none;
-    transition: 0.3s;
-    margin: 12px auto;
-    /* width: 120px; */
+}
+
+#invalidPass {
+    color: var(--secondary-url-color);
+    font-size: 12px;
+}
+
+#success {
+    color: var(--primary-font-color);
+    font-size: 12px;
+}
+
+#submitPass {
+    background-color: var(--primary-bg-color);
+    border: 1px solid var(--primary-font-color);
+    border-radius: 2px;
+    color: var(--primary-font-color);
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: 268px;
+    height: 48px;
+    transition: .4s;
+    padding: 8px 28px;
+    text-decoration: none;
+    text-align: center;
+    color: var(--tertiary-font-color);
+}
+#contentFrame {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#attribution {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+}
+#attribution, #attribution a {
+    color: rgba(18,18,28,0.25);;
+}
+.error {
+    display: none;
+    color: var(--secondary-url-color);
+    font-size: 12px;
 }
