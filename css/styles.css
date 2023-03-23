@@ -1017,6 +1017,10 @@ ol.default-bullets > li:before {
     padding: 0px 10px;
     border-right: solid 1px var(--primary-font-color);
 }
+ol.default-bullets.white > li:before {
+    color: var(--tertiary-font-color);
+    border-right: 1px solid var(--tertiary-font-color);
+}
 
 ol.default-bullets > li {
     margin-bottom: 12px;
