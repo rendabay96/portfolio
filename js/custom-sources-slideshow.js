@@ -14,7 +14,7 @@ function showDivs(n, m) {
   if (n > x.length) {slideIndex[m] = 1}
   if (n < 1) {slideIndex[m] = x.length}
   for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+    x[i].style.display = "none";  
   }
   x[slideIndex[m]-1].style.display = "block";
 }

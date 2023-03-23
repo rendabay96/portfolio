@@ -11,6 +11,7 @@
     --primary-font-color: #1f1f2f;
     --tertiary-font-color: #f5f5f5;
     --secondary-url-color: #EC3548;
+    --secondary2-url-color: #FCE0E3;
 
    
 }
@@ -120,6 +121,8 @@ h5 {
     font-family: 'Source Serif Pro', serif;
     font-size: 24px;
     font-weight: 300;
+    margin: 24px 0 12px 0;
+    line-height: normal;
 }
 p {
     z-index: 3;
@@ -306,22 +309,62 @@ img {
     padding: 0 0 80px 0;
 }
 
+img.scrolly-images-2 {
+    position: absolute;
+    width: 33%;
+    max-width: 456px;
+    right: 52%;
+    bottom: 160px;
+    height: auto;
+}
+
 /* Slide shows---------------------*/
 .mySlideshow-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 48px 24px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 120px 0;
     background: var(--tertiary-bg-color);
 }
 .mySlideshow {
+    width: 80%;
+    margin: 0 auto;
+}
+.mySlides {
+    -webkit-animation: fade-in-fwd 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: fade-in-fwd 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation-delay: 0.1s;
+}
+.slideshow-splitscreen { /*similar to .splitscreen styles*/
+    position: relative;
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    box-sizing: border-box;
+    max-width: 1280px;
+    margin: 0 auto;
+    height: auto;
+    justify-content: space-between;
+}
+.slideshow-splitscreen-left,
+.slideshow-splitscreen-right {
+    width: 100%;
+    /*max-width: 800px;*/
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0 32px 0 0;
     flex: 1;
+    box-sizing: border-box;
+}
+.slideshow-splitscreen-right {
+    margin: 0 0 0 32px;
 }
 
 .slideshow-btns {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 24px;
 }
 .slideshow-btns span {
     height: 48px;
@@ -342,9 +385,9 @@ img {
     transition: 0.3s;
     display: flex;
     margin: auto 12px;
+    flex-direction: row;
     align-items: center;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-around;
 }
 .slideshow-right:hover,
 .slideshow-left:hover {
@@ -352,7 +395,13 @@ img {
     color: #f5f5f5;
 }
 .slideshow-caption {
-    max-width: 600px;
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 100%;
+    align-items: flex-start;
 }
 /*
 .slideshow-transparent,
@@ -490,6 +539,16 @@ a.styled-label-1 {
     letter-spacing: 2px;
     font-size: 14px;
 }
+span.tag-1,
+span.tag-2  {
+    background: var(--tertiary2-bg-color);
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+}
+span.tag-2 {
+    background: var(--secondary2-url-color);
+}
 
 .text-highlight {
     position: static;
@@ -531,7 +590,7 @@ a#BH_work {
     display: -webkit-flex;
     display: -ms-flexbox;
     flex-direction: column;
-    width: 30%;
+    width: 48%;
     margin: 0 0 120px 0px;
     
 }
@@ -554,11 +613,7 @@ a#BH_work {
 }
 
 
-.project-link h5,
-.project-grid-item h5 {
-    margin: 24px 0 8px 0;
-    line-height: 24px;
-}
+
 
 .project-link,
 .project-link2 {
@@ -758,6 +813,7 @@ a#BH_work {
     margin: 0 auto;
 }
 
+/* case study table styles */
 .projects1 table,
 .projects2 table {
     text-align: left;
@@ -766,6 +822,7 @@ a#BH_work {
     margin: 56px auto;
     line-height: 18px;
     font-size: 0.9em;
+    border-collapse: collapse;
 }
 .projects1 tr,
 .projects2 tr {
@@ -776,14 +833,33 @@ a#BH_work {
 .projects2 th,
 .projects2 td  {
     border-bottom: 1px solid #e1e1e1;
+    padding: 12px 16px;
+    vertical-align: top;
 }
+
+table.bordered-table {
+    border: 1px solid #e1e1e1;
+    /* padding: 24px; */
+    max-width: 1200px;
+    line-height: 28px;
+    border-collapse: collapse;
+}
+.col-border-right {
+    border-right: 1px solid #e1e1e1;
+}
+
+
+
+
+
+
 .projects1 img,
 .projects1 video,
 .projects2 img,
 .projects2 video,
 .projects3 img,
 .projects3 video {
-    width: 90%;
+    width: 100%;
     margin: 60px auto;
     display: block;
 }
@@ -951,6 +1027,36 @@ ol.default-bullets > li {
     display: -ms-flexbox;
     align-items: flex-start;
 }
+
+.ol-bordered {
+    margin: 12px 0;
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.li-bordered {
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-bottom: 12px;
+}
+span.li-bordered-label{
+    height: auto;
+    width: auto;
+    margin-right: 20px;
+    box-sizing: border-box;
+    color: var(--primary-font-color);
+    padding: 0px 10px;
+    border-right: solid 1px var(--primary-font-color);
+}
+
+
 .splitscreen1,
 .splitscreen2 {
     position: relative;
@@ -959,9 +1065,12 @@ ol.default-bullets > li {
     display: -webkit-flex;
     display: -ms-flexbox;
     box-sizing: border-box;
-    padding: 60px 10%;
+    padding: 120px 0;
+    width: 80%;
+    max-width: 1280px;
     height: auto;
-    justify-content: space-around;
+    margin: 0 auto;
+    justify-content: space-between;
     background: #ffffff;
     align-items: center;
     }
@@ -971,9 +1080,15 @@ ol.default-bullets > li {
 .splitscreen1 .split-right,
 .splitscreen2 .split-right {
     width: 100%;
-    max-width: 640px;
+    /*max-width: 800px;*/
     box-sizing: border-box;
-    padding: 48px;
+    padding: 0px;
+    margin: auto 60px auto 0;
+
+}
+.splitscreen1 .split-right,
+.splitscreen2 .split-right {
+    margin: auto 0 auto 60px;
 }
 
 .splitscreen2 {
@@ -982,7 +1097,7 @@ ol.default-bullets > li {
 
 .blurb
 {
-    max-width: 540px;
+    max-width: 480px;
 }
 
 /*split screen*/
@@ -1020,29 +1135,20 @@ ol.default-bullets > li {
     /*----Home Page styles ---*/
 
     
-
+    .container{
+        padding: 96px 0;
+    }
     /*Projects ------*/
-    .splitscreen1,
-    .splitscreen2 {
-        flex-direction: column;
-        padding: 120px calc(25% - 88px);
+    .projects1,
+    .projects2,
+    .projects3 {
+        padding: 0px 10%;
     }
-    .splitscreen1 .split-left,
-    .splitscreen2 .split-left,
-    .splitscreen1 .split-right,
-    .splitscreen2 .split-right {
-        width: 100%;
-        padding: 44px;
-    }
-}
-@media (max-width: 955px) {
- 
-/* Case studies */
     .split-hero-2 {
-    margin: 0;
-    flex-direction: column;
-    height: auto;
-    width: 100%;
+        margin: 0;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
     }
     .split-hero-2 .split-hero-2-left {
         width: 100%;
@@ -1051,14 +1157,54 @@ ol.default-bullets > li {
     .split-hero-2 .split-hero-2-right {
         text-align: left;
         margin: 120px 0;
-        padding: 0px calc(28% - 88px);
+        padding: 0px 10%;
     }
 
     .split-hero-2-blurb {
         margin: auto;
-        padding: 0px 44px;
+        padding: 0px;
     }
+    .splitscreen1,
+    .splitscreen2 {
+        flex-direction: column;
+        padding: 60px 0;
+    }
+    .splitscreen1 .split-left,
+    .splitscreen2 .split-left,
+    .splitscreen1 .split-right,
+    .splitscreen2 .split-right {
+        width: 100%;
+        margin: 32px auto 0 auto;
+
+    }
+    /*Slideshows*/
+    .mySlideshow-container {
+        padding: 96px 0;
+    }
+    .slideshow-splitscreen {
+        flex-direction: column;
+        padding: 0px 10%;
+    }
+    .slideshow-splitscreen-right,
+    .slideshow-splitscreen-left {
+        margin: 32px auto 0 auto;
+    }
+    .slideshow-caption {
+        align-items: center;
+    }
+
+
     
+    
+ /* imgs */
+    img.scrolly-images-2 {
+        position: absolute;
+        width: 50%;
+        max-width: 524px;
+        right: 10%;
+        top: calc(120px + 15%);
+        height: auto;
+    }   
 }
 @media (max-width: 768px) {
     h2{
@@ -1191,16 +1337,12 @@ ol.default-bullets > li {
     }
     .projects1 table {
     text-align: left;
-    width: 280px;
     margin: 56px auto;
     line-height: 18px;
-    font-size: 0.9em;
     }
     .projects1 th, .projects1 td {
     font-size: 12px;
-    width: 100px;
     text-align: left;
-    padding: 0 0 0 20px;
     }
     ul.default-bullets, ol.default-bullets {
     padding: 0;
