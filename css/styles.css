@@ -1413,6 +1413,7 @@ span.li-bordered-label{
     -webkit-animation: fade-in-fwd 0.390s cubic-bezier(0.390, 0.575, 0.565, 0.390) both;
     animation: fade-in-fwd 0.390s cubic-bezier(0.390, 0.575, 0.565, 0.390) both;
     animation-delay: 0s;
+    z-index: 999;
 }
 
 
